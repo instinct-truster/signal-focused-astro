@@ -5,17 +5,17 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <p>{frontmatter.date.toString().slice(0, 10)}</p>
   <p transition:animate={fade({ duration: "2s" })}>
     <em>{frontmatter.description}</em>
   </p>
-  <p>Written by: <a href="/about/">{frontmatter.author}</a></p>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-  <div class="tags">
+  <p>Written by: <a href="/about/">{frontmatter.authors}</a></p>
+  <img src={frontmatter.image} width="300" />
+  <div class="categories">
     {
-      frontmatter.tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+      frontmatter.categories.map((category) => (
+        <p class="category">
+          <a href={`/categories/${category}`}>{category}</a>
         </p>
       ))
     }
@@ -27,12 +27,12 @@ const { frontmatter } = Astro.props;
     color: #00539f;
   }
 
-  .tags {
+  .categories {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .tag {
+  .category {
     margin: 0.25em;
     border: dotted 1px #a1a1a1;
     border-radius: 0.5em;
