@@ -1,17 +1,92 @@
 ---
-import Social from "./Social.astro";
+import GabIcon from "./icons/GabIcon.astro";
+import RumbleIcon from "./icons/RumbleIcon.astro";
+import Telegram from "./icons/Telegram.astro";
+import TruthIcon from "./icons/TruthIcon.astro";
+import XIcon from "./icons/XIcon.astro";
 ---
 
 <footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+  <div class="footer-container">
+    <div class="footer-left">
+      <div>
+        <img class="jesus-image" src="/images/Jesus.png" alt="Image of Jesus" />
+      </div>
+      <div class="jesus-quote">"Be not afraid. Only believe."</div>
+    </div>
+    <div class="footer-center-container">
+      <div>|<a class="footer-sitemap" href="/sitemap.xml">sitemap</a>|</div>
+      <div class="footer-social-container">
+        <XIcon boxSize={24} />
+        <RumbleIcon boxSize={22} />
+        <GabIcon boxSize={28} />
+        <TruthIcon boxSize={24} />
+        <Telegram boxSize={28} />
+      </div>
+    </div>
+    <div class="footer-right">
+      <div>
+        <img class="usa-image" src="/images/USA.png" alt="flag of USA" />
+      </div>
+      <div class="usa-quote">Proudly made in the USA</div>
+    </div>
+  </div>
 </footer>
 
 <style>
-  footer {
+  .footer-container {
+    height: 180px;
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    background-color: rgb(44, 44, 44);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .footer-center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-sitemap {
+    text-decoration: none;
+    color: #f8740f;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .footer-left,
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .jesus-image,
+  .usa-image {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 9px 4px var(--halo-glow);
+    animation: glow 3s linear infinite alternate;
+    margin-bottom: 5px;
+  }
+
+  @keyframes glow {
+    to {
+      box-shadow: 0px 0px 7px 7px var(--halo-glow);
+    }
+  }
+
+  .footer-social-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
   }
 </style>

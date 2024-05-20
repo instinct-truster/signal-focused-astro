@@ -4,7 +4,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 
 const pageTitle = "My Astro Learning Blog";
-const allPosts = await getCollection("posts");
+const postsCollection = await getCollection("posts");
+const allPosts = postsCollection.sort((a, b) => {
+  return b.data.date.getTime() - a.data.date.getTime();
+});
 ---
 
 <BaseLayout pageTitle={pageTitle}>

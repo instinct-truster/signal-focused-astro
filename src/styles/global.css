@@ -1,14 +1,21 @@
+:root {
+  --bg: #191919;
+  --bgSoft: #7c7c7c;
+  --text: #ffffff;
+  --textSoft: #e0e0e0;
+  --halo-glow: #ffffff;
+}
+
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
-  scrollbar-gutter: stable;
+  scrollbar-width: none;
+  scrollbar-color: grey #232323;
 }
 
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
   line-height: 1.5;
 }
 

@@ -1,0 +1,17 @@
+---
+interface Props {
+  color?: string;
+  boxSize?: number;
+}
+
+const { color = "var(--text)", boxSize = 32 } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 38.1 32.3"
+  fill={color}
+  width={boxSize}
+  height={boxSize}>
+  <path d="M14 16V0h24v9H24v23H14zm14 12v-4h10v8H28zM0 4V0h10v9H0Z"></path>
+</svg>
