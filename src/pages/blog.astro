@@ -2,8 +2,9 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
+import "../styles/global.css";
 
-const pageTitle = "My Astro Learning Blog";
+const pageTitle = "SIGNAL FOCUSED | Blog";
 const postsCollection = await getCollection("posts");
 const allPosts = postsCollection.sort((a, b) => {
   return b.data.date.getTime() - a.data.date.getTime();
@@ -11,11 +12,19 @@ const allPosts = postsCollection.sort((a, b) => {
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>This is where I will post about my journey learning Astro.</h2>
   <ul>
     {
       allPosts.map((post) => (
-        <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} />
+        <BlogPost
+          image={post.data.image}
+          url={`/posts/${post.slug}/`}
+          title={post.data.title}
+          description={post.data.description}
+          avatar={post.data.avatar}
+          authors={post.data.authors}
+          date={post.data.date}
+          categories={post.data.categories}
+        />
       ))
     }
   </ul>

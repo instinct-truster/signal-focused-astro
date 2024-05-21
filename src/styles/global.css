@@ -10,7 +10,6 @@ html {
   background-color: var(--bg);
   color: var(--text);
   font-family: sans-serif;
-  scrollbar-width: none;
   scrollbar-color: grey #232323;
 }
 
@@ -50,7 +49,7 @@ html.dark {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #ff9776;
+  background-color: var(--text);
 }
 
 .nav-links {
@@ -75,7 +74,8 @@ html.dark {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: orangered;
+  color: var(--bg);
 }
 
 .expanded {
