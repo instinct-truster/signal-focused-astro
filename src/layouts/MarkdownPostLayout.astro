@@ -2,6 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import { fade } from "astro:transitions";
 const { frontmatter } = Astro.props;
+import "../styles/global.css";
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
@@ -14,9 +15,9 @@ const { frontmatter } = Astro.props;
   <div class="categories">
     {
       frontmatter.categories.map((category) => (
-        <p class="category">
-          <a href={`/categories/${category}`}>{category}</a>
-        </p>
+        <a class="category" href={`/categories/${category}`}>
+          {category}
+        </a>
       ))
     }
   </div>
@@ -24,7 +25,7 @@ const { frontmatter } = Astro.props;
 </BaseLayout>
 <style>
   a {
-    color: #00539f;
+    color: var(--text);
   }
 
   .categories {
@@ -34,10 +35,10 @@ const { frontmatter } = Astro.props;
 
   .category {
     margin: 0.25em;
-    border: dotted 1px #a1a1a1;
     border-radius: 0.5em;
     padding: 0.5em 1em;
     font-size: 1.15em;
-    background-color: #f8fcfd;
+    background-color: orange;
+    text-decoration: none;
   }
 </style>
