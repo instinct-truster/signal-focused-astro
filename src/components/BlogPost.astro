@@ -1,43 +1,33 @@
 ---
 const { title, url, image, description, avatar, authors, date, categories } =
   Astro.props;
+import "../styles/global.css";
 ---
 
-<div class="list">
-  <div class="list-item">
-    <li>
-      <a href={url}
-        ><img class="list-image" src={image} alt={title} loading="lazy" />
-      </a>
-      <div class="list-text">
-        <h2 class="list-title-link">
-          <a href={url}>{title}</a>
-        </h2>
-        <p class="list-description">{description}</p>
-        <div class="list-detail">
-          <img class="list-avatar" src={avatar} alt="" />
-          <div class="list-authors">{authors}</div><div class="list-date">
-            {date}
-          </div>
-        </div>
-        <div class="list-categories">
-          <a class="list-category" href="">{categories}</a>
-        </div>
-      </div>
-    </li>
+<div class="list-container">
+  <div class="list-image">
+    <a href={url}
+      ><img class="list-image" src={image} alt={title} loading="lazy" />
+    </a>
+  </div>
+  <div class="list-text-container">
+    <h2 class="list-title"><a href={url}>{title}</a></h2>
+    <p class="list-description">{description}</p>
+    <div class="list-details-container">
+      <img class="list-avatar" src={avatar} alt="avatar" />
+      <div class="list-authors">{authors}</div>
+      <div class="list-date">{date}</div>
+      <div class="list-categories">{categories}</div>
+    </div>
   </div>
 </div>
 
 <style>
-  .list {
-    margin-top: 20px;
-  }
-
-  .list-item {
+  .list-container {
     display: flex;
+    margin-top: 40px;
+    gap: 40px;
     align-items: center;
-    gap: 50px;
-    margin-bottom: 50px;
   }
 
   .list-image {
@@ -48,22 +38,21 @@ const { title, url, image, description, avatar, authors, date, categories } =
     border: 2px solid #f8740f;
   }
 
-  .list-title-link {
+  .list-text-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .list-title {
     text-align: center;
     border-bottom: 2px solid #f8740f;
     padding-bottom: 5px;
     text-decoration: none;
   }
 
-  .list-text {
+  .list-details-container {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .list-detail {
-    display: flex;
-    align-items: center;
     gap: 10px;
     font-size: 14px;
   }
@@ -81,11 +70,6 @@ const { title, url, image, description, avatar, authors, date, categories } =
   }
 
   .list-categories {
-    display: flex;
-    gap: 10px;
-  }
-
-  .list-category {
     padding: 5px;
     border-radius: 5px;
     background-color: #a55b40;
