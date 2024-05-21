@@ -1,5 +1,5 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <button id="themeToggle">
@@ -23,7 +23,7 @@
     background: none;
   }
   .sun {
-    fill: black;
+    fill: var(--text);
   }
   .moon {
     fill: transparent;
@@ -33,7 +33,7 @@
     fill: transparent;
   }
   :global(.dark) .moon {
-    fill: white;
+    fill: var(--text);
   }
 </style>
 

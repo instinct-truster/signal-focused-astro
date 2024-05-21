@@ -4,6 +4,7 @@ import RumbleIcon from "./icons/RumbleIcon.astro";
 import Telegram from "./icons/Telegram.astro";
 import TruthIcon from "./icons/TruthIcon.astro";
 import XIcon from "./icons/XIcon.astro";
+import "../styles/global.css";
 ---
 
 <footer>
@@ -19,7 +20,7 @@ import XIcon from "./icons/XIcon.astro";
       <div class="footer-social-container">
         <XIcon boxSize={24} />
         <RumbleIcon boxSize={22} />
-        <GabIcon boxSize={28} />
+        <GabIcon boxSize={32} />
         <TruthIcon boxSize={24} />
         <Telegram boxSize={28} />
       </div>
@@ -35,14 +36,16 @@ import XIcon from "./icons/XIcon.astro";
 
 <style>
   .footer-container {
-    height: 180px;
+    height: 170px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    background-color: rgb(44, 44, 44);
+    background-color: var(--bg);
+    color: var(--text);
     padding-left: 10px;
     padding-right: 10px;
+    border-top: 1px solid gray;
   }
 
   .footer-center-container {
@@ -77,6 +80,11 @@ import XIcon from "./icons/XIcon.astro";
     margin-bottom: 5px;
   }
 
+  .jesus-quote,
+  .usa-quote {
+    color: var(--text);
+  }
+
   @keyframes glow {
     to {
       box-shadow: 0px 0px 7px 7px var(--halo-glow);
@@ -87,6 +95,6 @@ import XIcon from "./icons/XIcon.astro";
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 </style>

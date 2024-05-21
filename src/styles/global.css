@@ -1,13 +1,14 @@
 :root {
-  --bg: #191919;
+  --bg: white;
   --bgSoft: #7c7c7c;
-  --text: #ffffff;
+  --text: black;
   --textSoft: #e0e0e0;
   --halo-glow: #ffffff;
 }
 
 html {
-  background-color: #f1f5f9;
+  background-color: var(--bg);
+  color: var(--text);
   font-family: sans-serif;
   scrollbar-width: none;
   scrollbar-color: grey #232323;
@@ -26,6 +27,15 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+}
+
+html.dark {
+  --bg: black;
+  --text: white;
+}
+
+.dark .nav-links a {
+  color: var(--text);
 }
 
 /* NAV BEGIN */
@@ -59,6 +69,7 @@ h1 {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
+  color: var(--text);
   text-transform: uppercase;
 }
 
@@ -91,12 +102,3 @@ h1 {
 }
 
 /* NAV END */
-
-html.dark {
-  background-color: #0d0950;
-  color: #fff;
-}
-
-.dark .nav-links a {
-  color: #fff;
-}
