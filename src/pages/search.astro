@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+const pageTitle = "SIGNAL SEARCH";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h1>Custom Image Search</h1>
+  <form id="search-form">
+    <input
+      type="text"
+      id="search-box"
+      placeholder="Let's search the world wide web..."
+    />
+    <button>Search</button>
+  </form>
+  <div id="search-result"></div>
+  <button id="show-more-btn">Show more</button>
+</BaseLayout>
+
+<style>
+  body {
+    background: linear-gradient(#cf6d0b, #524e4e);
+    color: #ffffff;
+  }
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  form {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    height: 80px;
+    background: #874c04;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    margin-bottom: 40px;
+  }
+
+  form input {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 0 30px;
+  }
+
+  form button {
+    padding: 0, 40px;
+    height: 100%;
+    background: #df6208;
+    color: #ffffff;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    cursor: pointer;
+  }
+
+  input::placeholder {
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  #show-more-btn {
+    background: #874c04;
+    color: #ffffff;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 10px auto 100px;
+    cursor: pointer;
+    display: none;
+  }
+</style>
+
+<script>
+  import { API_KEY } from "/public/env.js";
+  const searchForm = document.getElementById("search-form");
+  const searchBox = document.getElementById("search-box");
+  const searchResult = document.getElementById("search-result");
+  const showMoreBtm = document.getElementById("show-more-btn");
+
+  let keyword = "";
+  let page = 1;
+
+  async function searchImages() {
+    keyword = searchBox.value;
+    const url = `https://api.unsplash.com/search/photos?page=${page}&per_page=30&query=${keyword}&client_id=${API_KEY}`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    console.log(data);
+  }
+
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    page = 1;
+    searchImages();
+  });
+</script>
