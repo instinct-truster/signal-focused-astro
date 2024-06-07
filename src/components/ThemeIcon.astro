@@ -3,7 +3,7 @@ import "../styles/global.css";
 ---
 
 <button id="themeToggle">
-  <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <svg width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path
       class="sun"
       fill-rule="evenodd"
@@ -22,17 +22,17 @@ import "../styles/global.css";
     border: 0;
     background: none;
   }
-  .sun {
+  .moon {
     fill: var(--text);
   }
-  .moon {
+  .sun {
     fill: transparent;
   }
 
-  :global(.dark) .sun {
+  :global(.dark) .moon {
     fill: transparent;
   }
-  :global(.dark) .moon {
+  :global(.dark) .sun {
     fill: var(--text);
   }
 </style>

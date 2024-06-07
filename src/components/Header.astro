@@ -2,17 +2,17 @@
 import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
 import ThemeIcon from "./ThemeIcon.astro";
-import "../styles/global.css";
 ---
 
 <header>
+  <Navigation />
   <Hamburger />
   <ThemeIcon />
-  <Navigation />
 </header>
 
 <style>
   header {
+    display: flex;
     background: var(--bg);
   }
 </style>
