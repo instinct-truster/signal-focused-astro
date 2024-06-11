@@ -1,0 +1,736 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "GOAL SETTING";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <header class="header">
+    <div class="spacer"></div>
+    <pre class="header-text">GOAL SETTING APP</pre>
+    <button
+      class="theme-switcher"
+      id="theme-switcher"
+      title="Toggle Day or Night Mode">
+      <img src="/images/icon-sun.svg" alt="Change color theme" />
+    </button>
+  </header>
+  <main>
+    <div class="card add">
+      <div class="cb-container">
+        <button id="add-btn">+</button>
+      </div>
+      <div class="input-container">
+        <label for="addt"></label>
+        <input
+          type="text"
+          class="text-input"
+          placeholder="Your next goal awaits.."
+          spellcheck="false"
+          autocomplete="off"
+          id="addt"
+        />
+      </div>
+    </div>
+    <ul class="goals"></ul>
+    <div class="card stat">
+      <p class="corner"><span id="items-left">0</span> goals remain</p>
+      <div class="filter">
+        <button id="all" class="on">All</button>
+        <button id="active">Active</button>
+        <button id="completed">Completed</button>
+      </div>
+      <div class="corner">
+        <button id="clear-completed">Clear Completed</button>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  :root {
+    --ff-sans: "Josefin Sans", sans-serif;
+    --base-font: 1.6rem;
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --img-bg: url("/images/vegasDay.jpg");
+    --clr-primary: hsl(0, 0%, 100%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-page-bg: hsl(25, 21%, 11%);
+    /* --clr-card-bg: hsl(235, 24%, 19%); */
+    --clr-card-bg: rgba(255, 255, 255, 0.5);
+    --clr-blue: #3a7bfd;
+    --clr-yellow: hsl(55, 91%, 58%);
+    --clr-orange: #e58124;
+    --clr-gb-1: hsl(236, 33%, 92%);
+    --clr-gb-2: hsl(234, 39%, 75%);
+    --clr-gb-3: hsl(234, 11%, 52%);
+    --clr-gb-4: hsl(237, 12%, 36%);
+    --clr-gb-5: #f87a20;
+    --clr-gb-6: hsl(0, 0%, 100%);
+    --clr-box-shadow: hsl(0, 0%, 0%, 0.1);
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    width: 100%;
+  }
+
+  /* CHANGE CUSTOM PROPERTIES WHEN LIGHT THEME */
+
+  body.light {
+    --img-bg: url("/images/vegasNight.jpg");
+    --clr-primary: hsl(243, 12%, 30%);
+    --clr-page-bg: hsl(0, 0%, 98%);
+    /* --clr-card-bg: hsl(0, 0%, 100%); */
+    --clr-card-bg: rgba(255, 255, 255, 0.5);
+    --clr-gb-1: hsl(240, 8%, 24%);
+    --clr-gb-2: hsl(243, 12%, 30%);
+    --clr-gb-3: hsl(252, 6%, 83%);
+    --clr-gb-4: hsl(237, 12%, 36%);
+    --clr-gb-5: hsl(0, 0%, 100%);
+    --clr-gb-6: hsl(0, 0%, 100%);
+  }
+
+  /* RESETS */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+    position: relative;
+    height: 100vh;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img {
+    user-select: none;
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "Pathway Gothic One";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../assets/fonts/pathway-gothic-one-v15-latin-regular.woff2")
+      format("woff2");
+  }
+
+  /* BODY */
+
+  .header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 60px;
+  }
+
+  .header-text {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-family: "Pathway Gothic One";
+    margin-top: 8px;
+    font-size: 40px;
+    font-weight: 600;
+    background: linear-gradient(#ffffff, #ffffff, #f0b92d, #f19c46);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 1px 0.5px rgb(255, 77, 0));
+  }
+
+  .spacer {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+  }
+
+  .theme-switcher {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  body {
+    font: var(--fw-normal) var(--base-font) var(--ff-sans);
+    background: var(--clr-page-bg) var(--img-bg) no-repeat 0% 0% / 100% 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    width: min(100%);
+    margin: auto;
+  }
+
+  main {
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+    margin: 0px auto;
+    max-width: 700px;
+  }
+
+  /* INPUT AND BUTTON */
+
+  input,
+  button {
+    font: inherit;
+    border: 0;
+    background: transparent;
+  }
+
+  button {
+    display: flex;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  input:focus,
+  button:focus {
+    outline: none;
+  }
+
+  label {
+    display: none;
+  }
+
+  .button {
+    cursor: pointer;
+  }
+
+  /* ALL ARE CARDS  */
+
+  .card {
+    background-color: var(--clr-card-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.9rem 2rem;
+    gap: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  }
+
+  /* HEADER'S CARD */
+
+  /* CHECKBOX CONTAINER AND FIELD */
+
+  .card .cb-container {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.1rem solid var(--clr-gb-6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .card .cb-container .cb-input {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+
+  .card .cb-container .check {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: url("/images/icon-check.svg"),
+      linear-gradient(180deg, var(--clr-yellow), var(--clr-orange));
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* CHECKED CARD */
+
+  .card .cb-container .cb-input:checked + .check {
+    background: url("/images/icon-check.svg"),
+      linear-gradient(180deg, var(--clr-gb-4), var(--clr-gb-5));
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* ADD CARD */
+
+  .add {
+    margin: 4rem 0 2.5rem 0;
+    border-radius: 10px;
+  }
+
+  .add .cb-container {
+    transition: background-color 0.5s ease;
+    background: linear-gradient(180deg, var(--clr-yellow), var(--clr-orange));
+  }
+
+  .add .cb-container #add-btn {
+    color: var(--clr-gb-6);
+    font-size: var(--base-font);
+    transition: color 0.3s ease;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .add .cb-container:hover {
+    background: linear-gradient(180deg, var(--clr-gb-4), var(--clr-gb-5));
+  }
+
+  .add .cb-container:active {
+    transform: scale(0.95);
+  }
+
+  .add .cb-container:hover #add-btn {
+    color: var(--clr-white);
+  }
+
+  .add .input-container {
+    flex: 1;
+  }
+
+  .add .input-container .text-input {
+    width: 100%;
+    padding: 0.7rem 0;
+    color: var(--clr-gb-4);
+    text-wrap: wrap;
+  }
+
+  body.light .add .input-container .text-input {
+    font-weight: var(--fw-bold);
+  }
+
+  .add .input-container .text-input::placeholder {
+    color: var(--clr-gb-4);
+    font-weight: var(--fw-normal);
+  }
+
+  /* GOALS CONTAINER */
+
+  .goals > * {
+    transition: 0.4s ease;
+  }
+
+  .goals .card[draggable] {
+    cursor: move;
+  }
+
+  .goals .card:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .goals > * + * {
+    border-top: 0.2rem solid var(--clr-gb-6);
+  }
+
+  .item {
+    flex: 1;
+    color: var(--clr-gb-4);
+  }
+
+  .item:hover {
+    color: var(--clr-gb-6);
+  }
+
+  body.light .goals {
+    box-shadow: 0 0 2rem 0.4rem var(--clr-box-shadow);
+  }
+
+  /* COMPLETED ITEM */
+
+  .goals .card.checked .item {
+    text-decoration: line-through;
+    color: var(--clr-gb-4);
+    text-decoration-color: var(--clr-gb-4);
+  }
+
+  /* CLEAR CONTAINER */
+
+  .clear {
+    cursor: pointer;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+  }
+
+  .goals .card:hover .clear {
+    pointer-events: all;
+  }
+
+  /* BOTTOM STAT CONTAINER */
+
+  .stat {
+    border-radius: 0 0 10px 10px;
+    border-top: 0.2rem solid var(--clr-gb-6);
+    font-size: calc(var(--base-font) - 0.3rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .stat * {
+    color: var(--clr-gb-6);
+  }
+
+  body.light .stat {
+    box-shadow: 0 1rem 2rem -0.4rem var(--clr-box-shadow);
+  }
+
+  /* CORNERS */
+
+  .stat .corner:last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .stat .corner button:hover {
+    color: var(--clr-gb-4);
+  }
+
+  /* FILTER BUTTONS */
+
+  .stat .filter {
+    display: flex;
+    justify-content: space-between;
+    font-weight: var(--fw-bold);
+  }
+
+  .stat .filter *:hover {
+    color: var(--clr-gb-4);
+  }
+
+  .stat .filter .on {
+    color: var(--clr-gb-4);
+  }
+
+  /* FOOTER */
+
+  /* JAVASCRIPT FUNCTIONS - STYLES */
+  /* FILTER GOALS */
+
+  .goals.active .card.checked,
+  .goals.completed .card {
+    transition: 0.4s;
+    opacity: 0;
+    padding: 0;
+    border: 0;
+    height: 0;
+    pointer-events: none;
+  }
+
+  .goals.completed .card.checked {
+    opacity: 1;
+    padding: 1.9rem 2rem;
+    height: auto;
+    display: flex;
+    pointer-events: all;
+    transition: 0.4s;
+  }
+
+  .goals.completed > .card.checked ~ .card.checked {
+    border-top: 0.2rem solid var(--clr-gb-6);
+  }
+
+  /* FALL ANIMATION */
+  .goals .card.fall {
+    pointer-events: none;
+    animation: fall 0.8s ease;
+  }
+
+  /* Fix this and make it nice vvv */
+  @keyframes fall {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(60%);
+      opacity: 0;
+    }
+  }
+
+  /* DRAG AND DROP */
+  .goals .card.dragging {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 599px) {
+    .stat {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 5rem 2rem;
+    }
+    .stat .filter {
+      grid-row: 2/3;
+      grid-column: 1/3;
+      justify-content: space-around;
+      position: relative;
+    }
+    .stat .filter::before {
+      content: "";
+      position: absolute;
+      width: calc(100% + 4rem);
+      height: 1rem;
+      background-color: var(--clr-page-bg);
+      top: -3rem;
+    }
+  }
+
+  @media (max-width: 340px) {
+    header.card {
+      align-items: center;
+    }
+    header.card h1 {
+      font-size: calc(var(--base-font) * 1.5);
+    }
+  }
+</style>
+
+<script>
+  //#region MAIN
+  /* DOMContentLoaded */
+  document.addEventListener("DOMContentLoaded", main);
+
+  function main() {
+    // theme-switcher
+    document
+      .getElementById("theme-switcher")
+      .addEventListener("click", function () {
+        document.querySelector("body").classList.toggle("light");
+        const themeImg = this.children[0];
+        themeImg.setAttribute(
+          "src",
+          themeImg.getAttribute("src") === "/images/icon-sun.svg"
+            ? "/images/icon-moon.svg"
+            : "/images/icon-sun.svg"
+        );
+      });
+    // get all goals and initialize listeners
+    addGoal();
+    // dragover on .goals container
+    document.querySelector(".goals").addEventListener("dragover", function (e) {
+      e.preventDefault();
+      if (
+        !e.target.classList.contains("dragging") &&
+        e.target.classList.contains("card")
+      ) {
+        const draggingCard = document.querySelector(".dragging");
+        const cards = [...this.querySelectorAll(".card")];
+        const currPos = cards.indexOf(draggingCard);
+        const newPos = cards.indexOf(e.target);
+        console.log(currPos, newPos);
+        if (currPos > newPos) {
+          this.insertBefore(draggingCard, e.target);
+        } else {
+          this.insertBefore(draggingCard, e.target.nextSibling);
+        }
+        const goals = JSON.parse(localStorage.getItem("goals"));
+        const removed = goals.splice(currPos, 1);
+        goals.splice(newPos, 0, removed[0]);
+        localStorage.setItem("goals", JSON.stringify(goals));
+      }
+    });
+    // add new goals on user input
+    const add = document.getElementById("add-btn");
+    const textInput = document.querySelector(".text-input");
+    textInput.addEventListener("focus", () => {
+      textInput.placeholder = "";
+    });
+    textInput.addEventListener("blur", () => {
+      textInput.placeholder = '"Your next goal awaits..."';
+    });
+    add.addEventListener("click", function () {
+      const item = textInput.value.trim();
+      if (item) {
+        textInput.value = "";
+        const goals = !localStorage.getItem("goals")
+          ? []
+          : JSON.parse(localStorage.getItem("goals"));
+        const currentGoal = {
+          item,
+          isCompleted: false,
+        };
+        addGoal([currentGoal]);
+        goals.push(currentGoal);
+        localStorage.setItem("goals", JSON.stringify(goals));
+      }
+      textInput.focus();
+    });
+    // add goal also on enter key event
+    textInput.addEventListener("keydown", function (e) {
+      if (e.keyCode === 13) {
+        add.click();
+      }
+    });
+    // filter goal - all, active, completed
+    document.querySelector(".filter").addEventListener("click", function (e) {
+      const id = e.target.id;
+      if (id) {
+        document.querySelector(".on").classList.remove("on");
+        document.getElementById(id).classList.add("on");
+        document.querySelector(".goals").className = `goals ${id}`;
+      }
+    });
+    // clear completed
+    document
+      .getElementById("clear-completed")
+      .addEventListener("click", function () {
+        deleteIndexes = [];
+        document.querySelectorAll(".card.checked").forEach(function (card) {
+          deleteIndexes.push(
+            [...document.querySelectorAll(".goals .card")].indexOf(card)
+          );
+          card.classList.add("fall");
+          card.addEventListener("animationend", function (e) {
+            setTimeout(function () {
+              card.remove();
+            }, 100);
+          });
+        });
+        removeManyGoal(deleteIndexes);
+      });
+  }
+  //#endregion
+
+  /* stateGoal() FUNCTION TO UPDATE GOAL */
+
+  function stateGoal(index, completed) {
+    const goals = JSON.parse(localStorage.getItem("goals"));
+    goals[index].isCompleted = completed;
+    localStorage.setItem("goals", JSON.stringify(goals));
+  }
+
+  /* removeGoal() FUNCTION TO REMOVE ONE GOAL */
+
+  function removeGoal(index) {
+    const goals = JSON.parse(localStorage.getItem("goals"));
+    goals.splice(index, 1);
+    localStorage.setItem("goals", JSON.stringify(goals));
+  }
+
+  /* removeManyGoal FUNCTION TO REMOVE MANY GOALS */
+
+  function removeManyGoal(indexes) {
+    let goals = JSON.parse(localStorage.getItem("goals"));
+    goals = goals.filter(function (goal, index) {
+      return !indexes.includes(index);
+    });
+    localStorage.setItem("goals", JSON.stringify(goals));
+  }
+
+  // editGoal() ADD FUNCTION TO EDIT GOAL
+
+  /* addGoal() FUNCTION TO LIST/CREATE GOALS AND ADD EVENT LISTENERS */
+
+  function addGoal(goals = JSON.parse(localStorage.getItem("goals"))) {
+    if (!goals) {
+      return null;
+    }
+    const itemsLeft = document.getElementById("items-left");
+    // create cards
+    goals.forEach(function (goal) {
+      const card = document.createElement("li");
+      const cbContainer = document.createElement("div");
+      const cbInput = document.createElement("input");
+      const check = document.createElement("span");
+      const item = document.createElement("p");
+      const button = document.createElement("button");
+      const iconDelete = document.createElement("img");
+
+      // Add classes
+      card.classList.add("card");
+      button.classList.add("clear");
+      button.classList.add("button");
+      cbContainer.classList.add("cb-container");
+      cbInput.classList.add("cb-input");
+      item.classList.add("item");
+      check.classList.add("check");
+      button.classList.add("clear");
+      // Set attributes
+      card.setAttribute("draggable", true);
+      iconDelete.setAttribute("src", "/images/icon-trash.svg");
+      iconDelete.setAttribute("title", "Delete goal?");
+      iconDelete.setAttribute("alt", "Delete");
+      cbInput.setAttribute("type", "checkbox");
+      // set goal item for card
+      item.textContent = goal.item;
+      // if completed -> add respective class / attribute
+      if (goal.isCompleted) {
+        card.classList.add("checked");
+        cbInput.setAttribute("checked", "checked");
+      }
+      // Add drag listener to card
+      card.addEventListener("dragstart", function () {
+        this.classList.add("dragging");
+      });
+      card.addEventListener("dragend", function () {
+        this.classList.remove("dragging");
+      });
+      // Add click listener to checkbox
+      cbInput.addEventListener("click", function () {
+        const correspondingCard = this.parentElement.parentElement;
+        const checked = this.checked;
+        stateGoal(
+          [...document.querySelectorAll(".goals .card")].indexOf(
+            correspondingCard
+          ),
+          checked
+        );
+        checked
+          ? correspondingCard.classList.add("checked")
+          : correspondingCard.classList.remove("checked");
+        itemsLeft.textContent = document.querySelectorAll(
+          ".goals .card:not(.checked)"
+        ).length;
+      });
+      // Add click listener to clear button
+      button.addEventListener("click", function () {
+        const correspondingCard = this.parentElement;
+        correspondingCard.classList.add("fall");
+        removeGoal(
+          [...document.querySelectorAll(".goals .card")].indexOf(
+            correspondingCard
+          )
+        );
+        correspondingCard.addEventListener("animationend", function () {
+          setTimeout(function () {
+            correspondingCard.remove();
+            itemsLeft.textContent = document.querySelectorAll(
+              ".goals .card:not(.checked)"
+            ).length;
+          }, 100);
+        });
+      });
+      // parent.appendChild(child)
+      button.appendChild(iconDelete);
+      cbContainer.appendChild(cbInput);
+      cbContainer.appendChild(check);
+      card.appendChild(cbContainer);
+      card.appendChild(item);
+      card.appendChild(button);
+      document.querySelector(".goals").appendChild(card);
+    });
+    // Update itemsLeft
+    itemsLeft.textContent = document.querySelectorAll(
+      ".goals .card:not(.checked)"
+    ).length;
+  }
+</script>

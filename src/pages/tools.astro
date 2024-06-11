@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import "../styles/global.css";
 const pageTitle = "SIG-TOOLS";
 ---
 
@@ -11,6 +10,13 @@ const pageTitle = "SIG-TOOLS";
       <div class="card-content">
         <h3>Image Search App</h3>
         <p>Find your inspiration</p>
+      </div>
+    </div>
+    <div class="card">
+      <a href="/goals"><img src="images/goal-setting-image.avif" /></a>
+      <div class="card-content">
+        <h3>Goal Setting App</h3>
+        <p>Focus Strength Action</p>
       </div>
     </div>
     <div class="card">
@@ -32,13 +38,6 @@ const pageTitle = "SIG-TOOLS";
       <div class="card-content">
         <h3>Slide Show App</h3>
         <p>Organize & enjoy your memories</p>
-      </div>
-    </div>
-    <div class="card">
-      <a href="/search"><img src="images/goal-setting-image.avif" /></a>
-      <div class="card-content">
-        <h3>Goal Setting App</h3>
-        <p>Focus Strength Action</p>
       </div>
     </div>
     <div class="card">
@@ -108,7 +107,7 @@ const pageTitle = "SIG-TOOLS";
     left: 0;
     width: 100%;
     position: absolute;
-    color: #ffffff;
+    color: var(--text);
     line-height: 1rem;
     padding: 10px;
     background: rgba(0, 0, 0, 0.7);
@@ -122,7 +121,7 @@ const pageTitle = "SIG-TOOLS";
   }
 
   .card-content p {
-    color: #ffffff;
+    color: var(--text);
     font-size: 16px;
     text-align: center;
   }

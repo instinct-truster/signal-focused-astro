@@ -28,12 +28,29 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={category}>
-  <p>Posts categorised with {category}</p>
+  <h1 class="category-page-title">Posts categorised with {category}</h1>
   <ul>
     {
       posts.map((post) => (
-        <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} />
+        <BlogPost
+          url={`/posts/${post.slug}/`}
+          title={post.data.title}
+          image={post.data.image}
+          url={`/posts/${post.slug}/`}
+          title={post.data.title}
+          description={post.data.description}
+          avatar={post.data.avatar}
+          authors={post.data.authors}
+          date={post.data.date}
+          categories={post.data.categories}
+        />
       ))
     }
   </ul>
 </BaseLayout>
+
+<style>
+  .category-page-title {
+    align-items: center;
+  }
+</style>

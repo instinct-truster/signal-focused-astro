@@ -45,6 +45,10 @@ import "../styles/global.css";
 </nav>
 
 <style>
+  nav {
+    background: transparent;
+  }
+
   .nav-links {
     display: flex;
     align-items: center;
@@ -66,8 +70,8 @@ import "../styles/global.css";
 
   .nav-links a:hover,
   .nav-links a:focus {
-    background-color: rgb(237, 91, 0);
-    color: white;
+    background: var(--gradient);
+    color: var(--text);
   }
 
   .expanded {

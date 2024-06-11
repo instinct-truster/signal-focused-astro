@@ -15,11 +15,17 @@
 }
 
 :root {
-  --bg: white;
-  --bgSoft: #7c7c7c;
-  --text: black;
-  --textSoft: #e0e0e0;
+  --bg: linear-gradient(#ff9500, #f63d00);
+  --text: white;
+  --gradient: linear-gradient(#ff9500, #f63d00);
   --halo-glow: #ffffff;
+  color: var(--text);
+  background: var(--bg);
+  --brand: orangered;
+}
+
+:root.dark {
+  --bg: black;
 }
 
 * {
@@ -27,16 +33,28 @@
 }
 
 html {
-  background-color: var(--bg);
-  color: var(--text);
+  height: 100%;
   font-family: "Poppins";
   scrollbar-color: grey #393939;
 }
 
 body {
-  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
   width: 100%;
-  line-height: 1.5;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: var(--bg);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 a {

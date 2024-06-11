@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import "../styles/global.css";
 const pageTitle = "SIGNAL SEARCH";
 ---
 
@@ -26,23 +25,24 @@ const pageTitle = "SIGNAL SEARCH";
     object-fit: cover;
     border-radius: 16px;
   }
+
+  body {
+    background: var(--gradient);
+    color: var(--text);
+  }
 </style>
 
 <style>
-  body {
-    background: linear-gradient(#ff9500, #f63d00);
-    color: #ffffff;
-  }
-
   h1 {
     text-align: center;
     text-transform: uppercase;
+    margin-top: 40px;
   }
 
   form {
     width: 90%;
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto;
     height: 80px;
     background: #ca6f00;
     display: flex;
@@ -57,7 +57,7 @@ const pageTitle = "SIGNAL SEARCH";
     border: 0;
     outline: 0;
     background: transparent;
-    color: #ffffff;
+    color: var(--text);
     font-size: 18px;
     padding: 0 30px;
   }
@@ -66,7 +66,7 @@ const pageTitle = "SIGNAL SEARCH";
     padding: 0, 40px;
     height: 100%;
     background: #df6208;
-    color: #ffffff;
+    color: var(--text);
     border: 0;
     outline: 0;
     border-top-right-radius: 1.25rem;
@@ -75,13 +75,13 @@ const pageTitle = "SIGNAL SEARCH";
   }
 
   input::placeholder {
-    color: #ffffff;
+    color: var(--text);
     font-size: 18px;
   }
 
   #show-more-btn {
-    background: #893900;
-    color: #ffffff;
+    background: var(--gradient);
+    color: var(--text);
     border: 0;
     outline: 0;
     padding: 10px 20px;

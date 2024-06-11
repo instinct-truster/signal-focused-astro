@@ -5,7 +5,7 @@ import "../styles/global.css";
 ---
 
 <div class="list-container">
-  <div class="list-image">
+  <div>
     <a href={url}
       ><img class="list-image" src={image} alt={title} loading="lazy" />
     </a>
@@ -35,7 +35,7 @@ import "../styles/global.css";
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid #f8740f;
+    border: 3px solid var(--text);
   }
 
   .list-text-container {
@@ -46,8 +46,8 @@ import "../styles/global.css";
 
   .list-title {
     text-align: center;
-    border-bottom: 2px solid #f8740f;
-    padding-bottom: 5px;
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 10px;
     text-decoration: none;
   }
 
@@ -62,18 +62,19 @@ import "../styles/global.css";
     height: 24px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid gray;
+    border: 2px solid var(--text);
   }
 
   .list-authors {
-    color: orangered;
+    color: var(--brand);
   }
 
   .list-categories {
     padding: 5px;
     border-radius: 5px;
-    background-color: #a55b40;
-    color: white;
+    border: 1px solid var(--text);
+    background: var(--brand);
+    color: var(--text);
     font-size: 14px;
     text-decoration: none;
   }
