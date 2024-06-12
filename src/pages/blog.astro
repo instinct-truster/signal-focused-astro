@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 
-const pageTitle = "SIGNAL FOCUSED | Blog";
+const pageTitle = "SIGNAL FOCUSED | BLOG";
 const postsCollection = await getCollection("posts");
 const allPosts = postsCollection.sort((a, b) => {
   return b.data.date.getTime() - a.data.date.getTime();

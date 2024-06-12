@@ -46,7 +46,7 @@ import "../styles/global.css";
 
   .list-title {
     text-align: center;
-    border-bottom: 2px solid var(--text);
+    border-bottom: 4px solid var(--text);
     padding-bottom: 10px;
     text-decoration: none;
   }
@@ -58,15 +58,20 @@ import "../styles/global.css";
   }
 
   .list-avatar {
-    width: 24px;
-    height: 24px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--text);
   }
 
   .list-authors {
-    color: var(--brand);
+    color: var(--text);
+    background: #ff9500;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
   }
 
   .list-categories {
@@ -75,8 +80,8 @@ import "../styles/global.css";
     border: 1px solid var(--text);
     background: var(--brand);
     color: var(--text);
-    font-size: 14px;
     text-decoration: none;
+    cursor: pointer;
   }
 
   a {

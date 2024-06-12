@@ -1,0 +1,196 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "WEATHER APP";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h1 class="weather-title">WEATHER APP</h1>
+  <div class="weather-container">
+    <img
+      src="/images/weather-cloudy.avif"
+      alt="weather image"
+      class="weather-image"
+    />
+    <div class="search-bar">
+      <input type="text" placeholder="Weather search" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24px"
+        height="24px"
+        viewBox="0 0 24 24"
+        ><path
+          fill="var(--text)"
+          d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+        ></path></svg
+      >
+    </div>
+    <div class="weather-humidity-card">
+      <div class="weather-humidity">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24px"
+          height="24px"
+          viewBox="0 0 40 40"
+          ><g fill="var(--text)"
+            ><path
+              d="M28.369 20.018c-1.985-6.528-7.827-13.495-8.124-13.847a.495.495 0 0 0-.731 0c-.297.352-6.14 7.318-8.126 13.847c-.407 1.339-.665 2.662-.665 3.903c0 5.048 4.108 9.155 9.156 9.155c5.048 0 9.154-4.107 9.154-9.155c.001-1.241-.257-2.563-.664-3.903M19.88 32.12c-4.521 0-8.199-3.678-8.199-8.198c0-1.227.273-2.553.709-3.903c1.737-5.375 6.183-11.156 7.49-12.781c1.307 1.625 5.753 7.406 7.488 12.781c.436 1.351.709 2.676.709 3.903c0 4.52-3.677 8.198-8.197 8.198"
+            ></path><path
+              d="M14.748 20.018c-.5 1.27-.834 2.542-.834 3.7a5.965 5.965 0 0 0 11.931 0c0-1.158-.334-2.43-.834-3.7z"
+            ></path></g
+          ></svg
+        >
+      </div>
+    </div>
+    <div class="weather-wind-card">
+      <div class="weather-wind">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          ><g fill="none"
+            ><path
+              d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"
+            ></path><path
+              fill="var(--text)"
+              d="M14.5 16a2.5 2.5 0 1 1-1.667 4.363a1 1 0 0 1 1.235-1.568l.099.078A.5.5 0 1 0 14.5 18H7a1 1 0 1 1 0-2zm-3-14a6.502 6.502 0 0 1 6.086 4.212a6.002 6.002 0 0 1 1.25 11.077a4.508 4.508 0 0 0-3.306-3.17a5 5 0 0 0-8.86-4.62A2.986 2.986 0 0 0 6.267 11H3c-.21 0-.413.021-.61.062A5.018 5.018 0 0 1 5 8.416A6.5 6.5 0 0 1 11.5 2M11 9a3 3 0 1 1 0 6H3a1 1 0 1 1 0-2h8a1 1 0 1 0-.803-1.596l-.064.097a1 1 0 0 1-1.731-1.002A3 3 0 0 1 11 9"
+            ></path></g
+          ></svg
+        >
+      </div>
+    </div>
+    <div class="weather-details-container">
+      <p class="weather-temperature">78°</p>
+      <p class="weather-city">San Mateo</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .weather-container {
+    position: relative;
+    display: inline-block;
+    margin: 40px auto;
+    width: 300px;
+    height: 400px;
+    border: 2px solid var(--text);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .weather-container img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .weather-title {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-bar {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 40px;
+    border: 2px solid var(--text);
+    border-radius: 20px;
+  }
+
+  .search-bar svg {
+    margin-right: 10px;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+  }
+
+  .search-bar input {
+    height: 38px;
+    border: none;
+    outline: none;
+    border: 2px solid var(--text);
+    border-radius: 19px;
+    padding-left: 20px;
+    color: var(--text);
+    background: var(--bg-clear);
+  }
+
+  input::placeholder {
+    color: var(--text);
+  }
+
+  .weather-humidity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: var(--bg);
+    color: var(--text);
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    z-index: 120;
+  }
+
+  .weather-wind {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--bg);
+    color: var(--text);
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    z-index: 120;
+  }
+
+  .weather-humidity svg {
+    height: 50px;
+    width: 50px;
+  }
+  .weather-wind svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .weather-temperature {
+    position: absolute;
+    bottom: 4px;
+    left: 88px;
+    color: var(--text);
+    font-size: 80px;
+    line-height: 1;
+  }
+
+  .weather-city {
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+    color: var(--text);
+    font-size: 40px;
+  }
+
+  .weather-details-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    background: rgba(0, 0, 0, 0.4);
+  }
+</style>

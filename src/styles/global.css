@@ -16,19 +16,24 @@
 
 :root {
   --bg: linear-gradient(#ff9500, #f63d00);
+  --bg-rev: linear-gradient(#f63d00, #ff9500);
+  --bg-clear: linear-gradient(rgba(246, 61, 0, 0.4), rgba(255, 149, 0, 0.4));
   --text: white;
   --gradient: linear-gradient(#ff9500, #f63d00);
   --halo-glow: #ffffff;
+  --brand: orangered;
+  --dull: #818181;
   color: var(--text);
   background: var(--bg);
-  --brand: orangered;
 }
 
 :root.dark {
-  --bg: black;
+  --bg: linear-gradient(#000000, #2b2b2b, #481a03);
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -39,31 +44,25 @@ html {
 }
 
 body {
-  height: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+
+.base-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
   min-height: 100vh;
   width: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: var(--bg);
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
 a {
   text-decoration: none;
-}
-
-html.dark {
-  --bg: black;
-  --text: white;
 }
 
 .dark .nav-links a {
