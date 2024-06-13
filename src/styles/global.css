@@ -8,17 +8,17 @@
 
 @font-face {
   font-display: swap;
-  font-family: "Kaushan";
+  font-family: "Pathway Gothic";
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/fonts/kaushan-script-v16-latin-regular.woff2");
+  src: url("../assets/fonts/pathway-gothic-one-v15-latin-regular.woff2");
 }
 
 :root {
   --bg: linear-gradient(#ff9500, #f63d00);
   --bg-rev: linear-gradient(#f63d00, #ff9500);
   --bg-clear: linear-gradient(rgba(246, 61, 0, 0.4), rgba(255, 149, 0, 0.4));
-  --text: white;
+  --text: #ffffff;
   --gradient: linear-gradient(#ff9500, #f63d00);
   --halo-glow: #ffffff;
   --brand: orangered;
@@ -31,29 +31,11 @@
   --bg: linear-gradient(#000000, #2b2b2b, #481a03);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  height: 100%;
-  font-family: "Poppins";
-  scrollbar-color: grey #393939;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+.dark .nav-links a {
+  color: var(--text);
 }
 
 .base-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex: 1;
   height: 100%;
   min-height: 100vh;
   width: 100%;
@@ -61,10 +43,61 @@ body {
   background-image: var(--bg);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Poppins";
+}
+
+html {
+  scrollbar-color: grey #393939;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
 a {
   text-decoration: none;
 }
 
-.dark .nav-links a {
-  color: var(--text);
+ul {
+  list-style: none;
 }

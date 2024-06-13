@@ -10,7 +10,6 @@ interface Props {
 
 const { frontmatter } = Astro.props;
 
-// const displayedDate = frontmatter.date.toString().slice(3, 15)
 const displayedDate = formatArticleDate(frontmatter.date);
 ---
 

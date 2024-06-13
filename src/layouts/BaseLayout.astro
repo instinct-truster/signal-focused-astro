@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import Navbar from "../components/Navbar.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 const { pageTitle } = Astro.props;
@@ -17,7 +17,7 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <div class="base-container">
-      <Navbar />
+      <Header />
       <main>
         <slot />
       </main>
