@@ -5,15 +5,17 @@ const pageTitle = "SIGNAL SEARCH";
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>Custom Image Search</h1>
-  <form id="search-form">
-    <input
-      type="text"
-      id="search-box"
-      autocomplete="off"
-      placeholder="Let's search the world wide web..."
-    />
-    <button>Search</button>
-  </form>
+  <div class="form-container">
+    <form id="search-form">
+      <input
+        type="text"
+        id="search-box"
+        autocomplete="off"
+        placeholder="Let's search the world wide web..."
+      />
+      <button>Search</button>
+    </form>
+  </div>
   <div id="search-result"></div>
   <button id="show-more-btn">Show more</button>
 </BaseLayout>
@@ -35,7 +37,12 @@ const pageTitle = "SIGNAL SEARCH";
     margin-bottom: 40px;
   }
 
-  form {
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #search-form {
     display: flex;
     align-items: center;
     width: 400px;
@@ -43,18 +50,17 @@ const pageTitle = "SIGNAL SEARCH";
     height: 80px;
     background: #ca6f00;
     border-radius: 20px;
-    margin-bottom: 40px;
   }
 
   form input {
     flex: 1;
+    background: transparent;
     height: 100%;
     border: 0;
     outline: 0;
-    background: transparent;
     color: var(--text);
     font-size: 18px;
-    padding: 0 30px;
+    padding-left: 12px;
   }
 
   form button {
