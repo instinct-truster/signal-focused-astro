@@ -23,16 +23,14 @@
   --halo-glow: #ffffff;
   --brand: orangered;
   --dull: #818181;
+  --bg-base: #ff9500;
   color: var(--text);
   background: var(--bg);
 }
 
 :root.dark {
   --bg: linear-gradient(#000000, #2b2b2b, #481a03);
-}
-
-.dark .nav-links a {
-  color: var(--text);
+  --bg-base: #000000;
 }
 
 .base-container {
