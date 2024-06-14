@@ -28,7 +28,7 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={category}>
-  <h1 class="category-page-title">Posts categorised with {category}</h1>
+  <h1 class="category-page-title">{category} blog</h1>
   <ul>
     {
       posts.map((post) => (
@@ -51,6 +51,9 @@ const { posts } = Astro.props;
 
 <style>
   .category-page-title {
-    align-items: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
   }
 </style>
