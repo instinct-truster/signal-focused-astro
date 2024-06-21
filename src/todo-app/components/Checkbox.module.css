@@ -1,0 +1,41 @@
+.checkbox,
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 36px;
+  height: 35px;
+  border: 2px solid #5997d4;
+  transition: all 0.4s;
+}
+
+.checkbox input {
+  position: absolute;
+  appearance: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.active input {
+  position: absolute;
+  appearance: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.active {
+  background: linear-gradient(
+    180deg,
+    rgba(61, 107, 255, 0.7929) 0%,
+    rgba(89, 151, 213, 0.3564) 100%
+  );
+}

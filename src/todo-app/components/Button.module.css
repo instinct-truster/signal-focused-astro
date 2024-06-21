@@ -1,0 +1,22 @@
+.button {
+  background: #5997d5;
+  border-radius: 6px;
+  padding: 6px 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s;
+  border: 1px solid #5997d5;
+  margin-top: 2px;
+}
+
+.button:hover {
+  border: 1px solid #5997d5;
+  color: #5997d5;
+  background: transparent;
+  transform: translateY(-2px);
+}
+
+.button:disabled {
+  opacity: 50%;
+}
