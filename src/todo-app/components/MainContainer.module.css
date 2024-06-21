@@ -1,13 +1,4 @@
 .mainContainer {
-  /* background: linear-gradient(
-    180deg,
-    rgba(213, 219, 238, 0.63) 0%,
-    #c8d9ea 32.29%,
-    #bed5e8 69.27%,
-    rgba(208, 216, 234, 0.58) 100%
-  ); */
-  /* box-shadow: 8px 13px 19px -3px rgba(0, 0, 0, 0.33); */
-  border-radius: 39px;
   width: 100%;
   height: 100%;
   padding: 24px 63px;
