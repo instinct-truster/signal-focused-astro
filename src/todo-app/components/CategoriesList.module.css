@@ -1,12 +1,15 @@
 .categoriesList {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 51px;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .categoriesList div {
+  width: 240px;
   justify-content: center;
   align-items: center;
   cursor: pointer;

@@ -12,7 +12,6 @@ import { useSelector } from "react-redux";
 import { Provider } from "react-redux";
 import { store, persistor } from "./store/store.js";
 import { PersistGate } from "redux-persist/integration/react";
-// import "./index.css";
 
 function App() {
   return (
