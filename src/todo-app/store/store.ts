@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todosReducer from "../reducer/todosSlice";
+import todosReducer from "../reducer/todosSlice.js";
 import storage from "redux-persist/lib/storage";
 import { persistStore, persistReducer } from "redux-persist";
 
@@ -15,5 +15,7 @@ export const store = configureStore({
     todos: persistedReducer,
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>;
 
 export const persistor = persistStore(store);

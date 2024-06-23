@@ -32,12 +32,15 @@ function TodoItem({ todo }) {
       </div>
       <div className={styles.actionButton}>
         {editingMode ? (
-          <ActionButton icon={checkmark} handleClick={() => handleEdit()} />
+          <ActionButton icon={checkmark.src} handleClick={handleEdit} />
         ) : (
-          <ActionButton icon={edit} handleClick={() => setEditingMode(true)} />
+          <ActionButton
+            icon={edit.src}
+            handleClick={() => setEditingMode(true)}
+          />
         )}
         <ActionButton
-          icon={trash}
+          icon={trash.src}
           handleClick={() => dispatch(deleteTodo(todo.id))}
         />
       </div>

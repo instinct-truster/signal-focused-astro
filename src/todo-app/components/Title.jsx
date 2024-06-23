@@ -5,7 +5,7 @@ function Title() {
   return (
     <div className={styles.titleContainer}>
       <Typography fontSize={24} bold>
-        Advanced Goal Setting App
+        Goal Setting App
       </Typography>
     </div>
   );

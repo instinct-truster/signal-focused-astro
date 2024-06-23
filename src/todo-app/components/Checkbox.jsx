@@ -15,7 +15,7 @@ function Checkbox({ todo }) {
         checked={todo.done}
         onChange={(e) => handleCheckbox(e.target.checked)}
       />
-      <img src={checkmark} alt="checkmark" />
+      <img src={checkmark.src} alt="checkmark" />
     </div>
   );
 }

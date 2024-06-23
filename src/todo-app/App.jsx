@@ -7,11 +7,11 @@ import {
   ProgressBar,
   Form,
   CategoriesList,
-} from "./components";
-import { useSelector } from "react-redux";
+} from "./components/index.js";
 import { Provider } from "react-redux";
-import { store, persistor } from "./store/store.js";
+import { store, persistor } from "./store/store";
 import { PersistGate } from "redux-persist/integration/react";
+import { useAppSelector } from "./hooks/useAppSelector";
 
 function App() {
   return (
@@ -24,13 +24,13 @@ function App() {
 }
 
 function AppContent() {
-  const { category } = useSelector((state) => state.todos);
+  const { category } = useAppSelector((state) => state.todos);
   return (
     <MainContainer>
       <Title />
       <Typography fontSize={24} bold marginTop={38} marginBottom={17}>
-        List of <span style={{ textTransform: "uppercase" }}>{category}</span>{" "}
-        Tasks
+        Your list of{" "}
+        <span style={{ textTransform: "uppercase" }}>{category}</span> goals
       </Typography>
 
       <MainContainer flexrow>
@@ -38,7 +38,7 @@ function AppContent() {
         <MainContainer flexcol>
           <Card col>
             <Typography fontSize={24} bold>
-              List of Tasks
+              Progress Tracker
             </Typography>
             <ProgressBar />
           </Card>

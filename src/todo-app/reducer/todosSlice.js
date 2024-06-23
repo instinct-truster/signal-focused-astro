@@ -1,11 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+/**
+ * @typedef {import("../../types/todo").Todo} Todo
+ */
+
+/**
+ * @typedef {Object} TodosState
+ * @prop {Array<Todo>} TodosState.todos
+ * @prop {string} TodosState.category
+ */
+
+/**
+ * @type {TodosState}
+ */
 const initialState = {
   todos: [
     {
       id: 1,
       name: "Complete this goal setting app",
       category: "finance",
+      done: false,
     },
   ],
   category: "finance",
@@ -20,7 +34,7 @@ export const todosSlice = createSlice({
     },
     updateTodo: (state, action) => {
       const index = state.todos.findIndex(
-        (todo) => todo.id === action.payload.id
+        (todo) => todo.id === action.payload.id,
       );
       if (index !== -1) {
         state.todos[index] = action.payload;

@@ -5,5 +5,21 @@ const pageTitle = "GOAL SETTING";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <App client:only="react" />
+  <div class="overlay">
+    <App client:only="react" />
+  </div>
 </BaseLayout>
+
+<style>
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+</style>
+
+<style is:global>
+  .base-container {
+    background-image: url(/images/goal-setting-image.avif);
+    background-position: center;
+    background-size: cover;
+  }
+</style>

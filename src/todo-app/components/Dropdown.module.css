@@ -6,8 +6,7 @@
 
 .dropdownHeader {
   background: #fdfdfd;
-  border: 1px solid #000000;
-  border-radius: 6px;
+  border-radius: 12px;
   height: 100%;
   width: 100%;
   outline: none;
@@ -19,9 +18,13 @@
   cursor: pointer;
 }
 
-.dropdownHeader img {
-  width: 10px;
-  height: 10px;
+.dropdownHeader p {
+  color: #5997d5;
+}
+
+.dropsvg {
+  width: 12px;
+  height: 12px;
 }
 
 .dropdownContent {
@@ -43,12 +46,13 @@
 .dropdownContent p {
   cursor: pointer;
   width: 100%;
-  padding: 10px 0px;
-  transition: all 0.4s ease-in-out;
+  padding: 5px 5px;
+  color: #5997d5;
 }
 
 .dropdownContent p:hover {
   cursor: pointer;
   background: #5997d5;
   color: #ffffff;
+  border-radius: 16px;
 }

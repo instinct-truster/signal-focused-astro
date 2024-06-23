@@ -12,23 +12,23 @@ function Form() {
   return (
     <div className={styles.form}>
       <Typography fontSize={24} bold>
-        Add New Task
+        Set your next goal...
       </Typography>
       <Card col>
         <div className={styles.inputContainer}>
-          <Typography fontSize={16}>Task Name:</Typography>
+          <Typography fontSize={16}>Your Goal:</Typography>
           <input onChange={vm.handleNameChange} type="text" value={vm.name} />
         </div>
         <div className={styles.inputContainer}>
           <Typography fontSize={16}>Category:</Typography>
           <Dropdown
-            placeholder="Please select a category"
+            placeholder="Select your category"
             value={vm.category}
             onChange={vm.handleCategoryChange}
           />
         </div>
         <Button isDisabled={!vm.isValid} onClick={vm.handleAddTodo}>
-          Add
+          ADD
         </Button>
       </Card>
     </div>
