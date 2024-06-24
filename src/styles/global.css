@@ -17,7 +17,7 @@
 :root {
   --bg: linear-gradient(#ff9500, #f63d00);
   --bg-rev: linear-gradient(#f63d00, #ff9500);
-  --bg-clear: linear-gradient(rgba(246, 61, 0, 0.4), rgba(255, 149, 0, 0.4));
+  --bg-clear: lightblue;
   --text: #ffffff;
   --gradient: linear-gradient(#ff9500, #f63d00);
   --halo-glow: #ffffff;
@@ -49,6 +49,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
