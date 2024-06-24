@@ -11,7 +11,7 @@ function Form() {
   const vm = useFormViewModel();
   return (
     <div className={styles.form}>
-      <Typography fontSize={24} bold>
+      <Typography fontSize={20} marginLeft={6} marginBottom={-6} bold>
         Set your next goal...
       </Typography>
       <Card col>

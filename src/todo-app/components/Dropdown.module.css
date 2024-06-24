@@ -5,13 +5,13 @@
 }
 
 .dropdownHeader {
-  background: #fdfdfd;
+  background: #ffffff;
   border-radius: 12px;
   height: 100%;
   width: 100%;
   outline: none;
   padding: 0px 10px;
-  margin-top: 10px;
+  margin-top: 6px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,12 +19,12 @@
 }
 
 .dropdownHeader p {
-  color: #5997d5;
+  color: orangered;
 }
 
 .dropsvg {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
 }
 
 .dropdownContent {
@@ -47,12 +47,12 @@
   cursor: pointer;
   width: 100%;
   padding: 5px 5px;
-  color: #5997d5;
+  color: orangered;
 }
 
 .dropdownContent p:hover {
   cursor: pointer;
-  background: #5997d5;
+  background: orangered;
   color: #ffffff;
   border-radius: 16px;
 }

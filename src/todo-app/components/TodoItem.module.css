@@ -2,17 +2,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .taskName input {
   background: transparent;
   border: 1px solid #ffffff;
-  font-size: 24px;
+  font-size: 14px;
   outline: none;
 }
 
 .actionButton {
   display: flex;
-  gap: 21px;
+  gap: 12px;
 }

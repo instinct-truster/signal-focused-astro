@@ -28,16 +28,22 @@ function AppContent() {
   return (
     <MainContainer>
       <Title />
-      <Typography fontSize={24} bold marginTop={38} marginBottom={17}>
-        Your list of{" "}
-        <span style={{ textTransform: "uppercase" }}>{category}</span> goals
+      <Typography
+        fontSize={20}
+        bold
+        marginTop={20}
+        marginBottom={4}
+        marginLeft={6}
+      >
+        Your <span style={{ textTransform: "uppercase" }}>{category}</span>{" "}
+        goals
       </Typography>
 
       <MainContainer flexrow>
         <TodosList />
         <MainContainer flexcol>
           <Card col>
-            <Typography fontSize={24} bold>
+            <Typography fontSize={20} marginBottom={4} bold>
               Progress Tracker
             </Typography>
             <ProgressBar />

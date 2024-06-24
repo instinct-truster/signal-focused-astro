@@ -1,12 +1,13 @@
 .button {
   background: var(--bg-rev);
   border-radius: 20px;
-  padding: 6px 30px;
+  padding: 4px 10px;
   color: #ffffff;
   cursor: pointer;
   transition: all 0.2s;
   border: 2px solid #ffffff;
   margin-top: 2px;
+  outline: none;
 }
 
 .button:hover {

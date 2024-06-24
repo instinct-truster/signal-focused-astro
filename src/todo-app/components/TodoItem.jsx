@@ -20,14 +20,16 @@ function TodoItem({ todo }) {
   return (
     <>
       <div className={styles.taskName}>
-        <Checkbox todo={todo} />
+        <div>
+          <Checkbox todo={todo} />
+        </div>
         {editingMode ? (
           <input
             type="text"
             onChange={(e) => setNewTodo({ ...todo, name: e.target.value })}
           />
         ) : (
-          <Typography fontSize={24}>{todo.name}</Typography>
+          <Typography fontSize={14}>{todo.name}</Typography>
         )}
       </div>
       <div className={styles.actionButton}>

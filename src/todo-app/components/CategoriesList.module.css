@@ -3,17 +3,17 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 51px;
-  gap: 30px;
+  margin-top: 20px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .categoriesList div {
-  width: 240px;
+  width: 80px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .categoriesList div:hover {
@@ -21,34 +21,15 @@
 }
 
 .categoriesList p {
-  background: linear-gradient(
-      180deg,
-      #3d6bff 0%,
-      rgba(61, 107, 255, 0.63) 0.01%,
-      #5ba7f3 69.27%
-    ),
-    linear-gradient(
-      180deg,
-      #3d6bff 0%,
-      rgba(61, 107, 255, 0.63) 0.01%,
-      #bacfe4 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(213, 219, 238, 0.63) 0%,
-      #c8d9ea 32.29%,
-      #bed5e8 69.27%,
-      rgba(205, 216, 234, 0.58) 100%,
-      #000000
-    );
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 14px;
 }
 
 .svg {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
 }

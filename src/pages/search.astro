@@ -4,7 +4,8 @@ const pageTitle = "SIGNAL SEARCH";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Custom Image Search</h1>
+  <h2>Custom Image Search</h2>
+  <p>(powered by Unsplash & filtered for free usage)</p>
   <div class="form-container">
     <form id="search-form">
       <input
@@ -30,10 +31,15 @@ const pageTitle = "SIGNAL SEARCH";
 </style>
 
 <style>
-  h1 {
+  h2 {
     text-align: center;
     text-transform: uppercase;
     margin-top: 40px;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
     margin-bottom: 40px;
   }
 

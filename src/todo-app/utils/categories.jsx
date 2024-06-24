@@ -4,4 +4,5 @@ export const categories = [
   { name: "fitness", icon: "/icons/workout.svg" },
   { name: "finance", icon: "/icons/laptop.svg" },
   { name: "fantasy", icon: "/icons/football.svg" },
+  { name: "fix", icon: "/icons/fix.svg" },
 ];

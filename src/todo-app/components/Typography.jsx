@@ -5,9 +5,17 @@
  * @param {boolean} props.bold
  * @param {number} props.marginTop
  * @param {number} props.marginBottom
+ * @param {number} props.marginLeft
  */
 
-function Typography({ children, fontSize, bold, marginTop, marginBottom }) {
+function Typography({
+  children,
+  fontSize,
+  bold,
+  marginTop,
+  marginBottom,
+  marginLeft,
+}) {
   return (
     <div
       style={{
@@ -15,6 +23,7 @@ function Typography({ children, fontSize, bold, marginTop, marginBottom }) {
         fontWeight: bold ? "700" : "400",
         marginTop: marginTop,
         marginBottom: marginBottom,
+        marginLeft: marginLeft,
       }}
     >
       {children}
