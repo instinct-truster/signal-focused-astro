@@ -20,7 +20,7 @@
   --bg-clear: lightblue;
   --text: #ffffff;
   --gradient: linear-gradient(#ff9500, #f63d00);
-  --halo-glow: #ffffff;
+  --halo-glow: rgba(255, 255, 255, 0.3);
   --brand: orangered;
   --dull: #818181;
   --bg-base: #ff9500;

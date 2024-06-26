@@ -4,19 +4,13 @@ const pageTitle = "SIGNAL FOCUSED | APPS";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+  <h2>Signal Focused Applications</h2>
   <div class="card-container">
     <div class="card">
       <a href="/search"><img src="/images/image-search-image.avif" /></a>
       <div class="card-content">
         <h3>Image Search App</h3>
         <p>Find your inspiration</p>
-      </div>
-    </div>
-    <div class="card">
-      <a href="/weather"><img src="/images/weather-report-image.avif" /></a>
-      <div class="card-content">
-        <h3>Weather Report App</h3>
-        <p>Plan and dress accordingly</p>
       </div>
     </div>
     <div class="card">
@@ -27,6 +21,13 @@ const pageTitle = "SIGNAL FOCUSED | APPS";
       </div>
     </div>
     <div class="card">
+      <a href="/search"><img src="images/slide-show-image.avif" /></a>
+      <div class="card-content">
+        <h3>Slide Show App</h3>
+        <p>Organize & enjoy your memories</p>
+      </div>
+    </div>
+    <div class="card">
       <a href="/search"><img src="images/music-player-image.avif" /></a>
       <div class="card-content">
         <h3>Music Player App</h3>
@@ -34,10 +35,10 @@ const pageTitle = "SIGNAL FOCUSED | APPS";
       </div>
     </div>
     <div class="card">
-      <a href="/search"><img src="images/slide-show-image.avif" /></a>
+      <a href="/weather"><img src="/images/weather-report-image.avif" /></a>
       <div class="card-content">
-        <h3>Slide Show App</h3>
-        <p>Organize & enjoy your memories</p>
+        <h3>Weather Report App</h3>
+        <p>Plan and dress accordingly</p>
       </div>
     </div>
     <div class="card">
@@ -75,12 +76,21 @@ const pageTitle = "SIGNAL FOCUSED | APPS";
 </BaseLayout>
 
 <style>
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
   .card-container {
     display: flex;
     gap: 40px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 40px;
     margin-bottom: 60px;
   }
 

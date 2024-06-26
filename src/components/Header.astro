@@ -3,7 +3,9 @@ import "../styles/global.css";
 ---
 
 <header>
-  <a href="/" class="logo">LOGO</a>
+  <div class="logo-container">
+    <a href="/" class="logo">LOGO</a>
+  </div>
   <nav>
     <ul>
       <li><a href="/">HOME</a></li>
@@ -49,6 +51,10 @@ import "../styles/global.css";
     z-index: 1;
   }
 
+  .logo-container {
+    width: 200px;
+  }
+
   .logo {
     color: var(--text);
   }
@@ -65,14 +71,23 @@ import "../styles/global.css";
 
   .header-right-container {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+    width: 200px;
+    gap: 8px;
   }
 
   .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px var(--halo-glow);
+    animation: glow 6s linear infinite alternate;
   }
 
   .login {
@@ -84,6 +99,12 @@ import "../styles/global.css";
 
   .login a {
     color: var(--text);
+  }
+
+  @keyframes glow {
+    to {
+      box-shadow: 0px 0px 2px 2px var(--halo-glow);
+    }
   }
 </style>
 

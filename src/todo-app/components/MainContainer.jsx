@@ -1,6 +1,12 @@
 import React from "react";
 import styles from "./MainContainer.module.css";
 
+/**
+ * @param {Object} props
+ * @param {React.ReactNode} [props.children]
+ * @param {boolean} [props.flexrow]
+ * @param {boolean} [props.flexcol]
+ */
 function MainContainer({ children, flexrow, flexcol }) {
   return (
     <div
@@ -8,9 +14,10 @@ function MainContainer({ children, flexrow, flexcol }) {
         flexrow
           ? styles.flexContainer
           : flexcol
-          ? styles.flexColContainer
-          : styles.mainContainer
-      }>
+            ? styles.flexColContainer
+            : styles.mainContainer
+      }
+    >
       {children}
     </div>
   );

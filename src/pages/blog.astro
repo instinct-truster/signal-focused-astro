@@ -11,20 +11,38 @@ const allPosts = postsCollection.sort((a, b) => {
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <ul>
-    {
-      allPosts.map((post) => (
-        <BlogPost
-          image={post.data.image}
-          url={`/posts/${post.slug}/`}
-          title={post.data.title}
-          description={post.data.description}
-          avatar={post.data.avatar}
-          authors={post.data.authors}
-          date={post.data.date}
-          categories={post.data.categories}
-        />
-      ))
-    }
-  </ul>
+  <div class="main-container">
+    <h2>Signal Focused Blog</h2>
+    <ul>
+      {
+        allPosts.map((post) => (
+          <BlogPost
+            image={post.data.image}
+            url={`/posts/${post.slug}/`}
+            title={post.data.title}
+            description={post.data.description}
+            avatar={post.data.avatar}
+            authors={post.data.authors}
+            date={post.data.date}
+            categories={post.data.categories}
+          />
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>
+
+<style>
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 24px 40px;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+</style>
