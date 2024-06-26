@@ -1,5 +1,4 @@
 export { default as MainContainer } from "./MainContainer";
-export { default as Typography } from "./Typography.jsx";
 export { default as Title } from "./Title";
 export { default as Card } from "./Card";
 export { default as TodosList } from "./Todoslist";

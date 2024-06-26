@@ -5,22 +5,19 @@ import Button from "./Button";
 import Card from "./Card";
 import Dropdown from "./Dropdown";
 import styles from "./Form.module.css";
-import Typography from "./Typography";
 
 function Form() {
   const vm = useFormViewModel();
   return (
     <div className={styles.form}>
-      <Typography fontSize={20} marginLeft={6} marginBottom={-6} bold>
-        Set your next goal...
-      </Typography>
+      <h3 className={styles.goalsTitle}>Set your next goal...</h3>
       <Card col>
         <div className={styles.inputContainer}>
-          <Typography fontSize={16}>Your Goal:</Typography>
+          <p>Your Goal:</p>
           <input onChange={vm.handleNameChange} type="text" value={vm.name} />
         </div>
         <div className={styles.inputContainer}>
-          <Typography fontSize={16}>Category:</Typography>
+          <p>Category:</p>
           <Dropdown
             placeholder="Select your category"
             value={vm.category}

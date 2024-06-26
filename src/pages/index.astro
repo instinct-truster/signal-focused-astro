@@ -1,38 +1,40 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import WingTitle from "../components/WingTitle.astro";
 const pageTitle = "SIGNAL FOCUSED | HOME";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2 class="welcome-title">Welcome to Signal Focused</h2>
-  <div class="upper-container">
-    <div class="card">
-      <a href="/categories/fantasy%20football">
-        <img src="/images/fantasy-football-image.avif" alt="" />
-      </a>
-      <div class="card-content">
-        <h3>Fantasy Football Blog</h3>
-        <p>Dynasty and season long opinion and strategy</p>
+  <div class="main-container">
+    <WingTitle>WELCOME TO SIGNAL FOCUSED</WingTitle>
+    <div class="upper-container">
+      <div class="card">
+        <a href="/categories/fantasy%20football">
+          <img src="/images/fantasy-football-image.avif" alt="" />
+        </a>
+        <div class="card-content">
+          <h3>Fantasy Football Blog</h3>
+          <p>Dynasty and season long opinion and strategy</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <a href="/categories/digital%20entertainment">
-        <img src="/images/digital-entertainment-image.avif" alt="" />
-      </a>
-      <div class="card-content">
-        <h3>Digital Entertainment Blog</h3>
-        <p>Video game reviews and recommendations</p>
+      <div class="card">
+        <a href="/categories/digital%20entertainment">
+          <img src="/images/digital-entertainment-image.avif" alt="" />
+        </a>
+        <div class="card-content">
+          <h3>Digital Entertainment Blog</h3>
+          <p>Video game reviews and recommendations</p>
+        </div>
       </div>
     </div>
   </div>
 </BaseLayout>
 
 <style>
-  .welcome-title {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    text-align: center;
+  .main-container {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
   }
 
   .upper-container {
@@ -40,15 +42,12 @@ const pageTitle = "SIGNAL FOCUSED | HOME";
     justify-content: center;
     width: 100%;
     gap: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
     margin-top: 40px;
-    margin-bottom: 40px;
   }
 
   .card {
     position: relative;
-    width: 50%;
+    width: 300px;
     height: 400px;
     border: 2px solid var(--text);
     border-radius: 20px;

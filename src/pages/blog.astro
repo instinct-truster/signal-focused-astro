@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
+import WingTitle from "../components/WingTitle.astro";
 
 const pageTitle = "SIGNAL FOCUSED | BLOG";
 const postsCollection = await getCollection("posts");
@@ -12,7 +13,7 @@ const allPosts = postsCollection.sort((a, b) => {
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="main-container">
-    <h2>Signal Focused Blog</h2>
+    <WingTitle>Main Blog</WingTitle>
     <ul>
       {
         allPosts.map((post) => (
@@ -38,11 +39,15 @@ const allPosts = postsCollection.sort((a, b) => {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 24px 40px;
+    padding: 40px;
   }
 
-  h2 {
-    text-transform: uppercase;
-    text-align: center;
+  .title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .svg {
+    transform: scale(-1, 1);
   }
 </style>

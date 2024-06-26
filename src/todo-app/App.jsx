@@ -1,7 +1,6 @@
 import {
   MainContainer,
   Title,
-  Typography,
   Card,
   TodosList,
   ProgressBar,
@@ -12,6 +11,7 @@ import { Provider } from "react-redux";
 import { store, persistor } from "./store/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { useAppSelector } from "./hooks/useAppSelector";
+import styles from "./App.module.css";
 
 function App() {
   return (
@@ -24,28 +24,20 @@ function App() {
 }
 
 function AppContent() {
-  const { category } = useAppSelector((state) => state.todos);
+  const category = useAppSelector((state) => state.todos.category);
   return (
     <MainContainer>
       <Title />
-      <Typography
-        fontSize={20}
-        bold
-        marginTop={20}
-        marginBottom={4}
-        marginLeft={6}
-      >
-        Your <span style={{ textTransform: "uppercase" }}>{category}</span>{" "}
-        goals
-      </Typography>
+      <span className={styles.goalCategory}>
+        YOUR <span style={{ textTransform: "uppercase" }}>{category}</span>{" "}
+        GOALS
+      </span>
 
       <MainContainer flexrow>
         <TodosList />
         <MainContainer flexcol>
           <Card col>
-            <Typography fontSize={20} marginBottom={4} bold>
-              Progress Tracker
-            </Typography>
+            <h3 className={styles.progressTitle}>Progress Tracker</h3>
             <ProgressBar />
           </Card>
           <Form />

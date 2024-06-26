@@ -1,6 +1,5 @@
 import styles from "./TodoItem.module.css";
 import Checkbox from "./Checkbox";
-import Typography from "./Typography";
 import ActionButton from "./ActionButton";
 import edit from "../assets/icons/edit.svg";
 import trash from "../assets/icons/trash.svg";
@@ -29,7 +28,7 @@ function TodoItem({ todo }) {
             onChange={(e) => setNewTodo({ ...todo, name: e.target.value })}
           />
         ) : (
-          <Typography fontSize={14}>{todo.name}</Typography>
+          <p>{todo.name}</p>
         )}
       </div>
       <div className={styles.actionButton}>

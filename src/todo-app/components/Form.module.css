@@ -10,8 +10,8 @@
 .form input {
   background: #ffffff;
   border-radius: 16px;
-  border: 2px solid orangered;
   height: 32px;
+  border: 0;
   width: 100%;
   outline: none;
   padding: 0px 10px;
@@ -21,4 +21,18 @@
 
 .inputContainer {
   width: 100%;
+}
+
+.goalsTitle {
+  font-size: 1.25rem;
+  margin-bottom: -6px;
+  font-weight: 700;
+  background: var(--shade);
+  padding: 6px 22px;
+  border: 2px solid var(--text);
+  border-radius: 30px;
+}
+
+p {
+  font-size: 1rem;
 }

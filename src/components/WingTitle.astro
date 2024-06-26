@@ -1,0 +1,12 @@
+---
+import WingIcon from "./icons/WingIcon.astro";
+---
+
+<div
+  style="display:flex; align-items:flex-start;text-align:center; justify-content: center; gap:2px">
+  <WingIcon isFlipped boxSize={24} />
+  <h2 style="text-transform: uppercase;">
+    <slot />
+  </h2>
+  <WingIcon boxSize={24} />
+</div>

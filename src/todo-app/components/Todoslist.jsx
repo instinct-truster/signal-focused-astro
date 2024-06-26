@@ -1,7 +1,6 @@
 import styles from "./Todoslist.module.css";
 import Card from "./Card";
 import TodoItem from "./TodoItem";
-import Typography from "./Typography";
 import { useFilterTodos } from "../hooks/useFilterTodos";
 
 function Todoslist() {
@@ -15,7 +14,7 @@ function Todoslist() {
           </Card>
         ))
       ) : (
-        <Typography>No goals are yet created</Typography>
+        <p>No goals are yet created</p>
       )}
     </div>
   );

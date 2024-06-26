@@ -1,4 +1,14 @@
 .titleContainer {
-  text-align: center;
-  text-transform: uppercase;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  padding: 8px 24px 4px;
+  border: 2px solid var(--text);
+  border-radius: 40px;
+  background: var(--shade);
+}
+
+.svg {
+  transform: scale(-1, 1);
 }

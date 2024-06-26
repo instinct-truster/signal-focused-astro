@@ -1,88 +1,88 @@
 ---
+import WingTitle from "../components/WingTitle.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "SIGNAL FOCUSED | APPS";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>Signal Focused Applications</h2>
-  <div class="card-container">
-    <div class="card">
-      <a href="/search"><img src="/images/image-search-image.avif" /></a>
-      <div class="card-content">
-        <h3>Image Search App</h3>
-        <p>Find your inspiration</p>
+  <div class="main-container">
+    <WingTitle>SIGNAL FOCUSED APPS</WingTitle>
+    <div class="card-container">
+      <div class="card">
+        <a href="/search"><img src="/images/image-search-image.avif" /></a>
+        <div class="card-content">
+          <h3>Image Search App</h3>
+          <p>Find your inspiration</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <a href="/goals"><img src="images/goal-setting-image.avif" /></a>
-      <div class="card-content">
-        <h3>Goal Setting App</h3>
-        <p>Focus Strength Action</p>
+      <div class="card">
+        <a href="/goals"><img src="images/poolside.jpeg" /></a>
+        <div class="card-content">
+          <h3>Goal Setting App</h3>
+          <p>Focus Strength Action</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <a href="/search"><img src="images/slide-show-image.avif" /></a>
-      <div class="card-content">
-        <h3>Slide Show App</h3>
-        <p>Organize & enjoy your memories</p>
+      <div class="card">
+        <a href="/search"><img src="images/slide-show-image.avif" /></a>
+        <div class="card-content">
+          <h3>Slide Show App</h3>
+          <p>Organize & enjoy your memories</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <a href="/search"><img src="images/music-player-image.avif" /></a>
-      <div class="card-content">
-        <h3>Music Player App</h3>
-        <p>Connect with your creative side</p>
+      <div class="card">
+        <a href="/search"><img src="images/music-player-image.avif" /></a>
+        <div class="card-content">
+          <h3>Music Player App</h3>
+          <p>Connect with your creative side</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <a href="/weather"><img src="/images/weather-report-image.avif" /></a>
-      <div class="card-content">
-        <h3>Weather Report App</h3>
-        <p>Plan and dress accordingly</p>
+      <div class="card">
+        <a href="/weather"><img src="/images/weather-report-image.avif" /></a>
+        <div class="card-content">
+          <h3>Weather Report App</h3>
+          <p>Plan and dress accordingly</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <a href="/search"><img src="images/css-animation-image.avif" /></a>
-      <div class="card-content">
-        <h3>CSS Animation Demos</h3>
-        <p>A place for storing those tricks</p>
+      <div class="card">
+        <a href="/search"><img src="images/css-animation-image.avif" /></a>
+        <div class="card-content">
+          <h3>CSS Animation Demos</h3>
+          <p>A place for storing those tricks</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <a href="/search"><img src="images/brain-teaser-image.avif" /></a>
-      <div class="card-content">
-        <h3>Brain Teaser App</h3>
-        <p>Puzzle and quiz challenges</p>
+      <div class="card">
+        <a href="/search"><img src="images/brain-teaser-image.avif" /></a>
+        <div class="card-content">
+          <h3>Brain Teaser App</h3>
+          <p>Puzzle and quiz challenges</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <a href="/search"
-        ><img src="images/quotes-and-inspiration-image.avif" /></a
-      >
-      <div class="card-content">
-        <h3>Quotes & Inspiration</h3>
-        <p>Inspiring thoughts and images</p>
+      <div class="card">
+        <a href="/search"
+          ><img src="images/quotes-and-inspiration-image.avif" /></a
+        >
+        <div class="card-content">
+          <h3>Quotes & Inspiration</h3>
+          <p>Inspiring thoughts and images</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <a href="/search"><img src="images/form-fun-image.avif" /></a>
-      <div class="card-content">
-        <h3>Form Fun Demos</h3>
-        <p>Login Email Register and Join us</p>
+      <div class="card">
+        <a href="/search"><img src="images/form-fun-image.avif" /></a>
+        <div class="card-content">
+          <h3>Form Fun Demos</h3>
+          <p>Login Email Register and Join us</p>
+        </div>
       </div>
     </div>
   </div>
 </BaseLayout>
 
 <style>
-  h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    margin-top: 40px;
-    margin-bottom: 40px;
+  .main-container {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
   }
 
   .card-container {
