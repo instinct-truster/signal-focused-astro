@@ -2,7 +2,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   padding: 6px 22px;
-  background: var(--bg);
+  background: var(--splash);
   border: 2px solid var(--text);
   border-radius: 30px;
   margin-bottom: 30px;

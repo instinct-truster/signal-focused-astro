@@ -16,7 +16,7 @@
   outline: none;
   padding: 0px 10px;
   margin-top: 6px;
-  color: orangered;
+  color: #601309;
 }
 
 .inputContainer {
@@ -27,7 +27,7 @@
   font-size: 1.25rem;
   margin-bottom: -6px;
   font-weight: 700;
-  background: var(--shade);
+  background: var(--splash);
   padding: 6px 22px;
   border: 2px solid var(--text);
   border-radius: 30px;
@@ -35,4 +35,5 @@
 
 p {
   font-size: 1rem;
+  font-weight: 700;
 }

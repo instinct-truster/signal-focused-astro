@@ -19,12 +19,12 @@
 }
 
 .dropdownHeader p {
-  color: orangered;
+  color: var(--bg-base);
 }
 
 .dropsvg {
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
 }
 
 .dropdownContent {
@@ -32,27 +32,28 @@
   position: absolute;
   top: 30px;
   left: 0;
-  width: 100%;
+  width: 30%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  text-align: center;
+  text-transform: uppercase;
   background: #ffffff;
-  border-radius: 6px;
-  padding: 6px;
+  border-radius: 12px;
+  padding: 4px;
 }
 
 .dropdownContent p {
   cursor: pointer;
   width: 100%;
   padding: 5px 5px;
-  color: orangered;
+  color: var(--bg-base);
 }
 
 .dropdownContent p:hover {
   cursor: pointer;
-  background: orangered;
+  background: var(--splash);
   color: #ffffff;
   border-radius: 16px;
 }

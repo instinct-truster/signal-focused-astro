@@ -10,16 +10,16 @@ function Form() {
   const vm = useFormViewModel();
   return (
     <div className={styles.form}>
-      <h3 className={styles.goalsTitle}>Set your next goal...</h3>
+      <h3 className={styles.goalsTitle}>SET YOUR NEXT GOAL . . .</h3>
       <Card col>
         <div className={styles.inputContainer}>
-          <p>Your Goal:</p>
+          <p>YOUR NEW GOAL:</p>
           <input onChange={vm.handleNameChange} type="text" value={vm.name} />
         </div>
         <div className={styles.inputContainer}>
-          <p>Category:</p>
+          <p>CATEGORY:</p>
           <Dropdown
-            placeholder="Select your category"
+            placeholder="SELECT A CATEGORY"
             value={vm.category}
             onChange={vm.handleCategoryChange}
           />

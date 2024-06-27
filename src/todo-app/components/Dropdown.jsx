@@ -2,11 +2,7 @@ import styles from "./Dropdown.module.css";
 import { categories } from "../utils/categories";
 import { useDisclosure } from "../hooks/useDisclosure";
 
-function Dropdown({
-  onChange,
-  value,
-  placeholder = "Please select an option",
-}) {
+function Dropdown({ onChange, value, placeholder = "" }) {
   const { isOpen, toggle, close } = useDisclosure();
   return (
     <div className={styles.dropdown}>
@@ -20,7 +16,7 @@ function Dropdown({
           viewBox="0 0 16 16"
         >
           <path
-            fill="orangered"
+            fill="var(--bg-base)"
             d="M3.2 5.74a.75.75 0 0 1 1.06-.04L8 9.227L11.74 5.7a.75.75 0 1 1 1.02 1.1l-4.25 4a.75.75 0 0 1-1.02 0l-4.25-4a.75.75 0 0 1-.04-1.06"
           />
         </svg>

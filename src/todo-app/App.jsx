@@ -37,7 +37,7 @@ function AppContent() {
         <TodosList />
         <MainContainer flexcol>
           <Card col>
-            <h3 className={styles.progressTitle}>Progress Tracker</h3>
+            <h3 className={styles.progressTitle}>PROGRESS TRACKER</h3>
             <ProgressBar />
           </Card>
           <Form />

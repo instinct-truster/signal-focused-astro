@@ -20,10 +20,12 @@
   --bg-clear: lightblue;
   --text: #ffffff;
   --splash: linear-gradient(
-    #ffe6ab 0%,
-    orangered 20%,
-    orange 80%,
-    #ffe6ab 100%
+    #ffffff 0%,
+    orange 10%,
+    orangered 30%,
+    orangered 70%,
+    orange 90%,
+    #ffffff 100%
   );
   --gradient: linear-gradient(#ff9500, #f63d00);
   --halo-glow: rgba(255, 255, 255, 0.3);
@@ -31,7 +33,9 @@
   --brand: orangered;
   --drop: drop-shadow(2px 10px 6px #404040);
   --dull: #818181;
+  --header: #ff9500;
   --bg-base: #ff9500;
+  --card: linear-gradient(orange 0%, orangered 30%, orangered 70%, orange 100%);
   color: var(--text);
   background: var(--bg);
 }
@@ -39,13 +43,17 @@
 :root.dark {
   --bg: linear-gradient(#000000, #601309, #601309);
   --bg-rev: linear-gradient(#601309, #601309, #000000);
-  --bg-base: #000000;
+  --bg-base: #601309;
+  --header: #000000;
+  --card: linear-gradient(#000000 0%, #601309 30%, #601309 70%, #000000 100%);
   --drop: drop-shadow(-4px 10px 8px #ababab);
   --splash: linear-gradient(
-    #ffdbfd 0%,
-    #601309 20%,
-    rgb(188, 15, 53) 80%,
-    #ffdbfd 100%
+    #ffffff 0%,
+    #bc0f35 10%,
+    #601309 30%,
+    #601309 70%,
+    #bc0f35 90%,
+    #ffffff 100%
   );
 }
 

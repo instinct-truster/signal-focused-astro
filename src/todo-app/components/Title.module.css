@@ -6,7 +6,7 @@
   padding: 8px 24px 4px;
   border: 2px solid var(--text);
   border-radius: 40px;
-  background: var(--shade);
+  background: var(--splash);
 }
 
 .svg {
