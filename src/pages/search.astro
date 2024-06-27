@@ -31,12 +31,15 @@ const pageTitle = "SIGNAL SEARCH";
     </div>
     <div class="preview-wrapper">
       <div class="preview">
+        <p>HISTORY</p>
         <img src="/images/colosseum.avif" alt="" />
       </div>
       <div class="preview">
+        <p>NATURE</p>
         <img src="/images/kayak.avif" alt="" />
       </div>
       <div class="preview">
+        <p>MASTERY</p>
         <img src="/images/paris.jpeg" alt="" />
       </div>
     </div>
@@ -133,8 +136,24 @@ const pageTitle = "SIGNAL SEARCH";
     height: 200px;
     width: 200px;
     object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .preview {
+    position: relative;
     border: 4px solid #ffffff;
     border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .preview p {
+    position: absolute;
+    height: 100%;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    left: 30px;
+    padding: 6px;
+    background: var(--shade);
   }
 
   #show-more-btn {
