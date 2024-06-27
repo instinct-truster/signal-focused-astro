@@ -19,10 +19,17 @@
   --bg-rev: linear-gradient(#f63d00, #f63d00, #ff9500);
   --bg-clear: lightblue;
   --text: #ffffff;
+  --splash: linear-gradient(
+    #ffe6ab 0%,
+    orangered 20%,
+    orange 80%,
+    #ffe6ab 100%
+  );
   --gradient: linear-gradient(#ff9500, #f63d00);
   --halo-glow: rgba(255, 255, 255, 0.3);
   --shade: rgba(0, 0, 0, 0.6);
   --brand: orangered;
+  --drop: drop-shadow(2px 10px 6px #404040);
   --dull: #818181;
   --bg-base: #ff9500;
   color: var(--text);
@@ -33,6 +40,13 @@
   --bg: linear-gradient(#000000, #601309, #601309);
   --bg-rev: linear-gradient(#601309, #601309, #000000);
   --bg-base: #000000;
+  --drop: drop-shadow(-4px 10px 8px #ababab);
+  --splash: linear-gradient(
+    #ffdbfd 0%,
+    #601309 20%,
+    rgb(188, 15, 53) 80%,
+    #ffdbfd 100%
+  );
 }
 
 .base-container {
