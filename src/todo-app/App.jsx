@@ -1,24 +1,19 @@
-import {
-  MainContainer,
-  Title,
-  Card,
-  TodosList,
-  ProgressBar,
-  Form,
-  CategoriesList,
-} from "./components/index.js";
 import { Provider } from "react-redux";
-import { store, persistor } from "./store/store";
-import { PersistGate } from "redux-persist/integration/react";
+import { store } from "./store/store";
 import { useAppSelector } from "./hooks/useAppSelector";
 import styles from "./App.module.css";
+import Card from "./components/Card";
+import CategoriesList from "./components/CategoriesList";
+import Form from "./components/Form";
+import MainContainer from "./components/MainContainer";
+import ProgressBar from "./components/ProgressBar";
+import Title from "./components/Title";
+import TodosList from "./components/TodosList";
 
 function App() {
   return (
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <AppContent />
-      </PersistGate>
+      <AppContent />
     </Provider>
   );
 }
@@ -28,6 +23,7 @@ function AppContent() {
   return (
     <MainContainer>
       <Title />
+      <CategoriesList />
       <span className={styles.goalCategory}>
         YOUR <span style={{ textTransform: "uppercase" }}>{category}</span>{" "}
         GOALS
@@ -43,7 +39,6 @@ function AppContent() {
           <Form />
         </MainContainer>
       </MainContainer>
-      <CategoriesList />
     </MainContainer>
   );
 }

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import App from "../todo-app/App.jsx";
-const pageTitle = "GOAL SETTING";
+const pageTitle = "SIGNAL FOCUSED | GOALS";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -21,6 +21,10 @@ const pageTitle = "GOAL SETTING";
 </style>
 
 <style is:global>
+  :root {
+    --header: red;
+  }
+
   .base-container {
     background-image: url(/images/poolside.jpeg);
     background-position: center;

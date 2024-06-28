@@ -34,7 +34,7 @@
   --drop: drop-shadow(2px 10px 6px #404040);
   --dull: #818181;
   --header: #ff9500;
-  --bg-base: #ff9500;
+  --bg-base: #f63d00;
   --card: linear-gradient(orange 0%, orangered 30%, orangered 70%, orange 100%);
   color: var(--text);
   background: var(--bg);

@@ -1,4 +1,4 @@
-import styles from "./Todoslist.module.css";
+import styles from "./TodosList.module.css";
 import Card from "./Card";
 import TodoItem from "./TodoItem";
 import { useFilterTodos } from "../hooks/useFilterTodos";

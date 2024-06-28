@@ -10,7 +10,7 @@ function Form() {
   const vm = useFormViewModel();
   return (
     <div className={styles.form}>
-      <h3 className={styles.goalsTitle}>SET YOUR NEXT GOAL . . .</h3>
+      <h3 className={styles.goalsTitle}>SET YOUR NEXT GOAL</h3>
       <Card col>
         <div className={styles.inputContainer}>
           <p>YOUR NEW GOAL:</p>

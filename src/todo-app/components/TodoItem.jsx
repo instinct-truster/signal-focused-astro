@@ -18,32 +18,34 @@ function TodoItem({ todo }) {
   };
   return (
     <>
-      <div className={styles.taskName}>
-        <div>
-          <Checkbox todo={todo} />
+      <div className={styles.todoItemContainer}>
+        <div className={styles.taskName}>
+          <div>
+            <Checkbox todo={todo} />
+          </div>
+          {editingMode ? (
+            <input
+              type="text"
+              onChange={(e) => setNewTodo({ ...todo, name: e.target.value })}
+            />
+          ) : (
+            <p>{todo.name}</p>
+          )}
         </div>
-        {editingMode ? (
-          <input
-            type="text"
-            onChange={(e) => setNewTodo({ ...todo, name: e.target.value })}
-          />
-        ) : (
-          <p>{todo.name}</p>
-        )}
-      </div>
-      <div className={styles.actionButton}>
-        {editingMode ? (
-          <ActionButton icon={checkmark.src} handleClick={handleEdit} />
-        ) : (
+        <div className={styles.actionButton}>
+          {editingMode ? (
+            <ActionButton icon={checkmark.src} handleClick={handleEdit} />
+          ) : (
+            <ActionButton
+              icon={edit.src}
+              handleClick={() => setEditingMode(true)}
+            />
+          )}
           <ActionButton
-            icon={edit.src}
-            handleClick={() => setEditingMode(true)}
+            icon={trash.src}
+            handleClick={() => dispatch(deleteTodo(todo.id))}
           />
-        )}
-        <ActionButton
-          icon={trash.src}
-          handleClick={() => dispatch(deleteTodo(todo.id))}
-        />
+        </div>
       </div>
     </>
   );

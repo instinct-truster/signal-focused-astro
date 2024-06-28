@@ -1,8 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, isAnyOf } from "@reduxjs/toolkit";
 
 /**
  * @typedef {import("../../types/todo").Todo} Todo
  */
+
+const storedTodos = localStorage.getItem("todos");
+const storedCategory = localStorage.getItem("category");
 
 /**
  * @typedef {Object} TodosState
@@ -14,15 +17,17 @@ import { createSlice } from "@reduxjs/toolkit";
  * @type {TodosState}
  */
 const initialState = {
-  todos: [
-    {
-      id: 1,
-      name: "Complete this goal setting app",
-      category: "finance",
-      done: false,
-    },
-  ],
-  category: "finance",
+  todos: storedTodos
+    ? JSON.parse(storedTodos)
+    : [
+        {
+          id: 1,
+          name: "Complete this goal setting app",
+          category: "finance",
+          done: false,
+        },
+      ],
+  category: storedCategory ? storedCategory : "faith",
 };
 
 export const todosSlice = createSlice({
@@ -47,6 +52,17 @@ export const todosSlice = createSlice({
     changeCategory: (state, action) => {
       state.category = action.payload;
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addMatcher(isAnyOf(updateTodo, addTodo, deleteTodo), (state, action) => {
+        const serializedTodos = JSON.stringify(state.todos);
+        localStorage.setItem("todos", serializedTodos);
+      })
+      .addMatcher(isAnyOf(changeCategory), (state, action) => {
+        const category = state.category;
+        localStorage.setItem("category", category);
+      });
   },
 });
 

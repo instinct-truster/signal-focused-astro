@@ -1,6 +1,13 @@
+.todoItemContainer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .taskName {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 10px;
 }
@@ -15,7 +22,4 @@
 .actionButton {
   display: flex;
   gap: 12px;
-}
-
-p {
 }
