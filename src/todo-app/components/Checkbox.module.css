@@ -12,7 +12,14 @@
 }
 
 .checkbox {
-  background: --;
+  background: linear-gradient(
+    #ffffff 0%,
+    #4de04f 5%,
+    #078f00 30%,
+    #078f00 70%,
+    #4de04f 95%,
+    #ffffff 100%
+  );
 }
 
 .checkbox input {
@@ -22,7 +29,7 @@
   width: 100%;
   height: 100%;
   cursor: pointer;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .active input {
@@ -33,7 +40,7 @@
   width: 100%;
   height: 100%;
   cursor: pointer;
-  z-index: 99999;
+  z-index: 10;
   border: 0;
 }
 

@@ -1,5 +1,5 @@
 import styles from "./Checkbox.module.css";
-import checkmark from "../assets/icons/checkmark.svg";
+import checkmark from "../../../public/icons/checkmark.svg";
 import { useDispatch } from "react-redux";
 import { updateTodo } from "../reducer/todosSlice";
 
