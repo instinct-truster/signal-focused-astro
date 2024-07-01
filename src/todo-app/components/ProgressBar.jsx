@@ -1,12 +1,11 @@
 import { useAppSelector } from "../hooks/useAppSelector";
+import { selectTodoList } from "../reducer/todosSlice";
 import styles from "./ProgressBar.module.css";
 
 function ProgressBar() {
-  const { todos } = useAppSelector((state) => state.todos);
-  const doneTodos = todos.filter((todo) => !todo.done);
-  const doneTodosPercentage = Math.round(
-    (doneTodos.length * 100) / todos.length,
-  );
+  const todos = useAppSelector(selectTodoList);
+  const doneTodos = calculateTotalDoneTodos(todos);
+  const doneTodosPercentage = Math.round((doneTodos / todos.length) * 100);
   return (
     <div className={styles.progressBar}>
       <p className={styles.progressValue}>{doneTodosPercentage + "%"}</p>
@@ -16,6 +15,16 @@ function ProgressBar() {
       ></div>
     </div>
   );
+}
+
+function calculateTotalDoneTodos(todoList) {
+  let total = 0;
+  for (const todo of todoList) {
+    if (todo.done) {
+      total += 1;
+    }
+  }
+  return total;
 }
 
 export default ProgressBar;

@@ -1,7 +1,12 @@
+import { useMemo } from "react";
+import { selectCategory, selectTodoList } from "../reducer/todosSlice";
 import { useAppSelector } from "./useAppSelector";
 
 export const useFilterTodos = () => {
-  const { todos, category } = useAppSelector((state) => state.todos);
-  const displayedTodos = todos.filter((todo) => todo.category === category);
-  return displayedTodos;
+  const todos = useAppSelector(selectTodoList);
+  const category = useAppSelector(selectCategory);
+  return useMemo(
+    () => todos.filter((todo) => todo.category === category),
+    [todos, category],
+  );
 };

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import App from "../todo-app/App.jsx";
-const pageTitle = "SIGNAL FOCUSED | GOALS";
+const pageTitle = "SIGNAL FOCUSED | GOAL SETTING";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -29,9 +29,11 @@ const pageTitle = "SIGNAL FOCUSED | GOALS";
 
   :root {
     --bg: linear-gradient(#32a3ff, #0073c5, #2f47d1);
+    --bg-alt: #32a3ff;
     --bg-rev: linear-gradient(#0073c5, #0073c5, #32a3ff);
     --bg-clear: lightblue;
     --text: #ffffff;
+    --radial: radial-gradient(circle at bottom, #32a3ff, #0073c5, #2f47d1);
     --splash: linear-gradient(
       #ffffff 0%,
       #32a3ff 5%,
@@ -46,11 +48,15 @@ const pageTitle = "SIGNAL FOCUSED | GOALS";
     --brand: orangered;
     --drop: drop-shadow(2px 10px 6px #404040);
     --dull: #818181;
-    --header: #32a3ff;
+    --header: linear-gradient(#32a3ff, #0073c5, #2f47d1);
     --bg-base: #2f47d1;
     --card: linear-gradient(#32a3ff, #2f47d1, #2f47d1, #32a3ff);
     color: var(--text);
     background: var(--bg);
+  }
+
+  :root.dark {
+    --header: linear-gradient(#000000, #601309, #601309);
   }
 
   .base-container {

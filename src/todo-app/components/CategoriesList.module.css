@@ -3,12 +3,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .categoriesList div {
-  width: 80px;
+  width: 64px;
   justify-content: center;
   align-items: center;
   cursor: pointer;

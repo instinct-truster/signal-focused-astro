@@ -69,4 +69,7 @@ export const todosSlice = createSlice({
 export const { deleteTodo, updateTodo, addTodo, changeCategory } =
   todosSlice.actions;
 
+export const selectTodoList = (store) => store.todos.todos;
+export const selectCategory = (store) => store.todos.category;
+
 export default todosSlice.reducer;

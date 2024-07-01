@@ -1,13 +1,13 @@
 .card,
 .cardCol {
-  background: var(--card);
+  background: var(--radial);
   border-radius: 14px;
   padding: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border: 1px solid var(--text);
+  /* border: 2px solid var(--text); */
 }
 
 .cardCol {

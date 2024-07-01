@@ -4,7 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import WingTitle from "../components/WingTitle.astro";
 
-const pageTitle = "SIGNAL FOCUSED | BLOG";
+const pageTitle = "SIGNAL FOCUSED | MAIN BLOG";
 const postsCollection = await getCollection("posts");
 const allPosts = postsCollection.sort((a, b) => {
   return b.data.date.getTime() - a.data.date.getTime();

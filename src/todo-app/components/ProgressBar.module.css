@@ -1,6 +1,6 @@
 .progressBar {
   display: inline-block;
-  background: aqua;
+  background: var(--bg-alt);
   border-radius: 10px;
   border: 2px solid #ffffff;
   width: 100%;
@@ -12,6 +12,7 @@
   position: absolute;
   top: -28px;
   right: 4px;
+  font-size: 0.75rem;
 }
 
 .progress {

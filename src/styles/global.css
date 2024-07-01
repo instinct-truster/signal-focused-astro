@@ -43,7 +43,9 @@
 :root.dark {
   --bg: linear-gradient(#000000, #601309, #601309);
   --bg-rev: linear-gradient(#601309, #601309, #000000);
+  --bg-alt: #ff2018;
   --bg-base: #601309;
+  --radial: radial-gradient(circle at bottom, #ff2018, #bc0f35, #601309);
   --header: #000000;
   --card: linear-gradient(#000000 0%, #601309 30%, #601309 70%, #000000 100%);
   --drop: drop-shadow(-4px 10px 8px #ababab);

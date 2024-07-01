@@ -9,6 +9,7 @@ import MainContainer from "./components/MainContainer";
 import ProgressBar from "./components/ProgressBar";
 import Title from "./components/Title";
 import TodosList from "./components/TodosList";
+import { selectCategory } from "./reducer/todosSlice";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
 }
 
 function AppContent() {
-  const category = useAppSelector((state) => state.todos.category);
+  const category = useAppSelector(selectCategory);
   return (
     <MainContainer>
       <Title />
@@ -31,16 +32,25 @@ function AppContent() {
 
       <MainContainer flexrow>
         <TodosList />
-        <MainContainer flexcol>
+        <div style={classes.rightSideContainer}>
           <Card col>
             <h3 className={styles.progressTitle}>PROGRESS TRACKER</h3>
             <ProgressBar />
           </Card>
           <Form />
-        </MainContainer>
+        </div>
       </MainContainer>
     </MainContainer>
   );
 }
+
+const classes = {
+  rightSideContainer: {
+    width: "100%",
+    gap: 20,
+    display: "flex",
+    flexDirection: "column",
+  },
+};
 
 export default App;
