@@ -5,7 +5,7 @@ draft: false
 description: 'You''ve spent the last three hours in gridlock regretting your earlier decision to "enjoy the morning for once" on your checkout day.'
 image: "/images/carnie-1.jpg"
 imageBig: "/images/carnie-1.jpg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

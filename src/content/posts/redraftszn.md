@@ -5,7 +5,7 @@ draft: false
 description: "Time to toss a sheet of Bounce into your redraft dryer so those pesky second rate rookies don’t cling to your upcoming draft boards."
 image: "/images/redraft-1.png"
 imageBig: "/images/redraft-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

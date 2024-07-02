@@ -5,7 +5,7 @@ draft: false
 description: "You know that feeling. It's pushing noon on the ninth-to-last dead Sunday before THE SEASON begins."
 image: "/images/scouting-1.jpeg"
 imageBig: "/images/scouting-1.jpeg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

@@ -6,7 +6,7 @@ draft: false
 description: "Promises of drafted players being floated across the Bellagio fountain pool in that beautiful Las Vegas sunshine had to be postponed for two years, but lucky for us the watery stage is set and that time has almost arrived."
 image: "/images/Las+Vegas,+Nevada.png"
 imageBig: "/images/Las+Vegas,+Nevada.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

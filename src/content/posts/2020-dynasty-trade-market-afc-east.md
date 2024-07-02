@@ -5,7 +5,7 @@ draft: false
 description: "Rumors that the new NFL CBA may be altering both the regular and post-season scheduling has been on the hotter side of recent topics."
 image: "/images/afce-1.png"
 imageBig: "/images/afce-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

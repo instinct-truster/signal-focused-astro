@@ -5,7 +5,7 @@ draft: false
 description: "The worst part about getting your official draft slot for an upcoming main event is that the swirling daydream dies."
 image: "/images/nav-part-I-1.png"
 imageBig: "/images/nav-part-I-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

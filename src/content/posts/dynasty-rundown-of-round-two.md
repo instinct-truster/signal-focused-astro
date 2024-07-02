@@ -5,7 +5,7 @@ draft: false
 description: "With Day Two of the 2018 NFL Draft in the books, many dynasty players are now trying to create a preliminary ranking, slotting these rookies into their personal top ten or entire first round."
 image: "/images/default-placeholder.jpeg"
 imageBig: "/images/default-placeholder.jpeg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

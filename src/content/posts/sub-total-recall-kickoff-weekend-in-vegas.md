@@ -5,7 +5,7 @@ draft: false
 description: "It’s a strange and hard to nail down feeling that stays with you the week after returning from Las Vegas."
 image: "/images/sub-1.jpg"
 imageBig: "/images/sub-1.jpg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

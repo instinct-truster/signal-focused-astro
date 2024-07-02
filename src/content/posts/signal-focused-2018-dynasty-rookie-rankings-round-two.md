@@ -5,7 +5,7 @@ draft: false
 description: "Happy belated Mother's Day and a preemptive Happy Graduation to all graduating in the upcoming weeks or those with kids graduating!"
 image: "/images/rookies-II-1.png"
 imageBig: "/images/rookies-II-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

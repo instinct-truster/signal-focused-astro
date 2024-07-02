@@ -5,7 +5,7 @@ draft: false
 description: "This is when I must schedule enough relaxation and fun with the family to offset my eventual slide into focused hibernation as I make all needed preparations for the return of the King, Football Season."
 image: "/images/default-placeholder.jpeg"
 imageBig: "/images/default-placeholder.jpeg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

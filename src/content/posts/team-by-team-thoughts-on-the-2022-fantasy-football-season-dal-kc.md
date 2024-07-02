@@ -5,7 +5,7 @@ draft: false
 description: "Despite being a team that on paper looks quite similar to their 2021 version, I’m having mixed feelings on how this season could play out for the Cowboys passing offense."
 image: "/images/HOUSTON+TEXANS.png"
 imageBig: "/images/HOUSTON+TEXANS.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

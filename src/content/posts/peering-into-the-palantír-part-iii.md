@@ -5,7 +5,7 @@ draft: false
 description: "It was recently brought to my attention (by my youngest son) that this website has a bit too much of an unintended Bait & Switchiness to it."
 image: "/images/peering-III-1.png"
 imageBig: "/images/peering-III-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

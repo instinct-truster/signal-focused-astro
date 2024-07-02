@@ -5,7 +5,7 @@ draft: false
 description: "Looking back on what I’ve posted to this site, the articles that have made me cringe the most (by far) upon re-reading have been these Pre-Draft rookie articles. "
 image: "/images/Batcave+Bill.png"
 imageBig: "/images/Batcave+Bill.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

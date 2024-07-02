@@ -5,7 +5,7 @@ draft: false
 description: "Anonymously traveling city-to-city, enjoying that mint-on-pillow hotel life."
 image: "/images/scouting-2nd-1.png"
 imageBig: "/images/scouting-2nd-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

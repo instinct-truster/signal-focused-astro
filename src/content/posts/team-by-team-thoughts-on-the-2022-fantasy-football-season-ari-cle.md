@@ -5,7 +5,7 @@ draft: false
 description: "June has arrived and Mandatory Minicamps are staggered out and underway across the NFL landscape."
 image: "/images/CINCINNATI+BENGALS.png"
 imageBig: "/images/CINCINNATI+BENGALS.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

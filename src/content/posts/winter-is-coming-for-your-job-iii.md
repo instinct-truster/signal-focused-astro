@@ -5,7 +5,7 @@ draft: false
 description: "Continuing our march through the uncertainties of Winter, our scouts up ahead are on the lookout for fantasy safe havens as well as hidden traps."
 image: "/images/winter-III-1.jpg"
 imageBig: "/images/winter-III-1.jpg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

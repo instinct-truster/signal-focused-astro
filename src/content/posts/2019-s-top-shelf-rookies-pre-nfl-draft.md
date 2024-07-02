@@ -5,7 +5,7 @@ draft: false
 description: "It could be that I’m just rebellious and don’t like being told who to think is best."
 image: "/images/top-shelf-1.png"
 imageBig: "/images/top-shelf-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

@@ -5,7 +5,7 @@ draft: false
 description: "As a sophomore at LSU, Clyde played second fiddle to a fairly no-named senior RB."
 image: "/images/RB+CLYDE+EDWARDS-HELAIRE.png"
 imageBig: "/images/RB+CLYDE+EDWARDS-HELAIRE.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

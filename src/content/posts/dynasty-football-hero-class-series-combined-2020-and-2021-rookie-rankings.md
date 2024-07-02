@@ -5,7 +5,7 @@ draft: false
 description: "Options. Such wonderful things to have at our disposal."
 image: "/images/OPM+Heros+Dynasty.png"
 imageBig: "/images/OPM+Heros+Dynasty.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

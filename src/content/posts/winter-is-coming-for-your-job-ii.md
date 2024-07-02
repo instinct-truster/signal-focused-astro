@@ -5,7 +5,7 @@ draft: false
 description: "We continue cutting our path through the snow in a team-by-team preview."
 image: "/images/winter-II-1.jpg"
 imageBig: "/images/winter-II-1.jpg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

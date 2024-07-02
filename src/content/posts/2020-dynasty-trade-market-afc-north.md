@@ -5,7 +5,7 @@ draft: false
 description: "Here we are, roughly a week after Patrick Mahomes, Andy Reid & Co. pulled off a dramatic come-from-behind victory in Super Bowl 54."
 image: "/images/afcn-2.png"
 imageBig: "/images/afcn-2.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

@@ -5,7 +5,7 @@ draft: false
 description: "Remember back in the heyday of online poker, when the hyper aggressive newly rich online guys and gals were upping their games and entering the WSOP live bracelet events to challenge the brick and mortar guys?"
 image: "/images/bakers-dozen-1.png"
 imageBig: "/images/bakers-dozen-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

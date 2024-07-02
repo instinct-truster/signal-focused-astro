@@ -5,7 +5,7 @@ draft: false
 description: "Pretty cool to think that for the the first time in their lives, the rookies just drafted are waking up as professional NFL football players."
 image: "/images/default-placeholder.jpeg"
 imageBig: "/images/default-placeholder.jpeg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

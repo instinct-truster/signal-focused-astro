@@ -5,7 +5,7 @@ draft: false
 description: "Now that I've completed a larger number of drafts, I can break down my position size of held players from my leather-bound imaginary Fantasy Portfolio. It even has an imaginary brass buckle."
 image: "/images/position-1.png"
 imageBig: "/images/position-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

@@ -5,7 +5,7 @@ draft: false
 description: "Either you earned a top pick or traded with someone who did. Congratulations! Best in class."
 image: "/images/default-placeholder.jpeg"
 imageBig: "/images/default-placeholder.jpeg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

@@ -5,7 +5,7 @@ draft: false
 description: "What’s not to like about our coldest and darkest season? A time for reflection. For reading. For putting off all outdoor projects and not feeling guilty about it."
 image: "/images/winter-I-1.jpg"
 imageBig: "/images/winter-I-1.jpg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

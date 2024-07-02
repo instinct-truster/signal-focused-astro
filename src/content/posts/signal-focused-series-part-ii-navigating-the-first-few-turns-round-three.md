@@ -5,7 +5,7 @@ draft: false
 description: "While preparing to write this particular article, I found myself at war with myself."
 image: "/images/nav-part-II-1.png"
 imageBig: "/images/nav-part-II-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

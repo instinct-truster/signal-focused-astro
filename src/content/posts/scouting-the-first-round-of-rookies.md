@@ -5,7 +5,7 @@ draft: false
 description: "In what now seems like the flash from a camera, so much has changed since that magical Spring of 2011."
 image: "/images/scouting-1st-1.png"
 imageBig: "/images/scouting-1st-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

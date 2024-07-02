@@ -5,7 +5,7 @@ draft: false
 description: "Gets a small dynasty ding for returning to college for his senior season, reducing the likely amount of peak years in the NFL by one."
 image: "/images/RB+NAJEE+HARRIS.png"
 imageBig: "/images/RB+NAJEE+HARRIS.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

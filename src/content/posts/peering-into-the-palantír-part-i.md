@@ -5,7 +5,7 @@ draft: false
 description: "Beauty is in the eye of the beholder.  Until draft day."
 image: "/images/peering-I-1.png"
 imageBig: "/images/peering-I-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

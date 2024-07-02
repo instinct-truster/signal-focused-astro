@@ -5,7 +5,7 @@ draft: false
 description: "Jonathan was born and raised in the small town of Salem (pop. 4774) New Jersey, graduating high school with honors in a class of only 69 students. "
 image: "/images/RB+JONATHAN+TAYLOR.png"
 imageBig: "/images/RB+JONATHAN+TAYLOR.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

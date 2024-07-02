@@ -5,7 +5,7 @@ draft: false
 description: "Draft weekend has ended and it's Back to Reality Monday on this final day of April."
 image: "/images/default-placeholder.jpeg"
 imageBig: "/images/default-placeholder.jpeg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

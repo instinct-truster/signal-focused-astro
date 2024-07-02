@@ -5,7 +5,7 @@ draft: false
 description: "Many things can happen to this rookie class between now and Kickoff Weekend of the 2018 NFL season."
 image: "/images/rookies-I-1.png"
 imageBig: "/images/rookies-I-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

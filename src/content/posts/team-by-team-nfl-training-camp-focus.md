@@ -5,7 +5,7 @@ draft: false
 description: "With Training Camp in full gear, Summer has effectively been terminated for those with the dream of playing for the NFL in 2018."
 image: "/images/camp-1.png"
 imageBig: "/images/camp-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

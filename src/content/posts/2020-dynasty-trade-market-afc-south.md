@@ -5,7 +5,7 @@ draft: false
 description: "As a division, the AFC South had the most parity in the NFL last year, with the top and bottom teams only separated by four wins."
 image: "/images/afcs-1.png"
 imageBig: "/images/afcs-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

@@ -5,7 +5,7 @@ draft: false
 description: "Count me as one who would decline a free look into a Palantír. I enjoy the surprises as life unfolds like a daily gift."
 image: "/images/peering-II-1.png"
 imageBig: "/images/peering-II-1.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

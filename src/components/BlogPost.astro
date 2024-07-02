@@ -1,9 +1,12 @@
 ---
 import "../styles/global.css";
 import { formatArticleDate } from "../utils/formatArticleDate";
+import { formatCategoryListDisplayText } from "../utils/formatCategoryListDisplayText";
+
 const { title, url, image, description, avatar, authors, date, categories } =
   Astro.props;
 
+const categoryDisplayText = formatCategoryListDisplayText(categories);
 const formattedDate = formatArticleDate(date);
 ---
 
@@ -20,7 +23,7 @@ const formattedDate = formatArticleDate(date);
       <img class="list-avatar" src={avatar} alt="avatar" />
       <div class="list-authors">{authors}</div>
       <div class="list-date">{formattedDate}</div>
-      <div class="list-categories">{categories}</div>
+      <div class="list-categories">{categoryDisplayText}</div>
     </div>
   </div>
 </div>

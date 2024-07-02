@@ -5,7 +5,7 @@ draft: false
 description: "With this being my first season of publicly sharing my opinions on fantasy football, I thought I’d give a transparent summary of how that season is going."
 image: "/images/cali-1.jpg"
 imageBig: "/images/cali-1.jpg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

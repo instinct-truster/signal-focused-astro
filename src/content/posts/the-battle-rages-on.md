@@ -5,7 +5,7 @@ draft: false
 description: "With record breaking fires still raging in both northern and southern California, we cannot help but put our selfish desires into proper perspective."
 image: "/images/rages-1.jpeg"
 imageBig: "/images/rages-1.jpeg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

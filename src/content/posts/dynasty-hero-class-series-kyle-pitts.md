@@ -5,7 +5,7 @@ draft: false
 description: "Kyle Pitts served as a reserve tight end for Florida his freshman year, playing in 11 out of 14 games as part of their special teams unit, and made it into the boxscore in 3 different games as a tight end."
 image: "/images/TE+KYLE+PITTS.png"
 imageBig: "/images/TE+KYLE+PITTS.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

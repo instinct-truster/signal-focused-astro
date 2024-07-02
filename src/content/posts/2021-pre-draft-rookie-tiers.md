@@ -5,7 +5,7 @@ draft: false
 description: "“Wow, it worked!” he exclaimed after being cryogenically frozen for a year… “Did I miss much?”"
 image: "/images/2021+PRE-DRAFT+ROOKIE+TIERS.png"
 imageBig: "/images/2021+PRE-DRAFT+ROOKIE+TIERS.png"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---

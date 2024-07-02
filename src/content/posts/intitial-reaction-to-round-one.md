@@ -5,7 +5,7 @@ draft: false
 description: "After sitting through what seemed like an hour long commercial with small bites of commentary from the experts sprinkled in, it was nice to start the actual draft off with a Rick Flair WOOOOO at the selection of QB Baker Mayfield 1.01."
 image: "/images/default-placeholder.jpeg"
 imageBig: "/images/default-placeholder.jpeg"
-categories: ["fantasy football"]
+categories: ["football"]
 authors: ["Lance Turbes"]
 avatar: "/images/most+interesting+man.png"
 ---
