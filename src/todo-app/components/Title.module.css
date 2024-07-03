@@ -1,15 +1,3 @@
-/* .titleContainer {
-  display: flex;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding: 8px 24px 4px;
-  border-radius: 40px;
-  background: var(--splash);
-  border-right: 4px solid var(--spice);
-  border-left: 4px solid var(--spice);
-} */
-
 .svg {
   transform: scale(-1, 1);
 }
@@ -24,8 +12,8 @@
   margin-bottom: 20px;
   background-image: var(--jelly-title);
   box-shadow: var(--jelly-shadow);
-  border-right: 4px solid var(--spice);
-  border-left: 4px solid var(--spice);
+  border-right: 6px solid var(--cufflinks);
+  border-left: 6px solid var(--cufflinks);
 }
 
 .titleSpan {

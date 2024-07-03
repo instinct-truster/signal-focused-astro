@@ -12,7 +12,7 @@
 .actionButton:hover {
   transform: translateY(-3px);
   transition: all 0.2s;
-  background: var(--bg);
+  background: var(--splash-alt);
 }
 
 .actionButton img {

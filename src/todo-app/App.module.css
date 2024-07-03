@@ -14,8 +14,8 @@
   margin-bottom: 20px;
   background-image: var(--jelly-title);
   box-shadow: var(--jelly-shadow);
-  border-right: 4px solid var(--spice);
-  border-left: 4px solid var(--spice);
+  border-right: 6px solid var(--cufflinks);
+  border-left: 6px solid var(--cufflinks);
 }
 
 .titleSpan {

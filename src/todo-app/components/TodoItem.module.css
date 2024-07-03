@@ -15,7 +15,7 @@
 .taskName input {
   background: transparent;
   border: 1px solid #ffffff;
-  border-radius: 50%;
+  border-radius: 20px;
   font-size: 0.875rem;
   outline: none;
 }

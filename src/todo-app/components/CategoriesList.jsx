@@ -19,7 +19,7 @@ function CategoriesList() {
             name={category.iconName}
             size={40}
             stroke={
-              category.iconName === "football" ? "var(--bg-base)" : undefined
+              category.iconName === "football" ? "var(--bg-alt)" : undefined
             }
           />
           <p>{category.name}</p>

@@ -17,8 +17,8 @@
   margin-top: 6px;
   color: var(--bg-base);
   border: none;
-  border-right: 4px solid var(--spice);
-  border-left: 4px solid var(--spice);
+  border-right: 6px solid var(--cufflinks);
+  border-left: 6px solid var(--cufflinks);
 }
 
 .inputContainer {

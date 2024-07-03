@@ -12,8 +12,16 @@
 
 .button:hover {
   transform: translateY(-3px);
-  background: var(--bg);
+  background: var(--splash-alt);
 }
 
 .button:disabled:hover {
+  background: linear-gradient(
+    #ffffff 0%,
+    #d1bdbc 8%,
+    #726e6f 40%,
+    #726e6f 60%,
+    #d1bdbc 92%,
+    #ffffff 100%
+  );
 }
