@@ -25,10 +25,13 @@ function AppContent() {
     <MainContainer>
       <Title />
       <CategoriesList />
-      <span className={styles.goalCategory}>
-        YOUR <span style={{ textTransform: "uppercase" }}>{category}</span>{" "}
-        GOALS
-      </span>
+      <div className={styles.title}>
+        <span className={styles.titleSpan}>
+          YOUR
+          <span>{category}</span>
+          GOALS
+        </span>
+      </div>
 
       <MainContainer flexrow>
         <TodosList />

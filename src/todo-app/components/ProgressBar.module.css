@@ -21,7 +21,7 @@
   left: 0;
   width: 60%;
   height: 100%;
-  background: var(--splash);
+  background: var(--jelly-title);
   border-radius: 10px;
   transition: all 0.4s ease-in-out;
 }
