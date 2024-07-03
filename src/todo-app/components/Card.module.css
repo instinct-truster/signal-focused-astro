@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* border: 2px solid var(--text); */
+  border-bottom: 4px solid var(--spice);
 }
 
 .cardCol {

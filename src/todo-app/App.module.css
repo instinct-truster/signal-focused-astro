@@ -4,6 +4,8 @@
   padding: 6px 22px;
   background: var(--splash);
   border-radius: 30px;
+  border-right: 4px solid var(--spice);
+  border-left: 4px solid var(--spice);
 }
 
 .progressTitle {

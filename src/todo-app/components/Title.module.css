@@ -6,6 +6,8 @@
   padding: 8px 24px 4px;
   border-radius: 40px;
   background: var(--splash);
+  border-right: 4px solid var(--spice);
+  border-left: 4px solid var(--spice);
 }
 
 .svg {
