@@ -56,6 +56,7 @@
   --radial: radial-gradient(circle at top, #ff2018, #bc0f35, #601309);
   --header: #000000;
   --card: linear-gradient(#000000 0%, #601309 30%, #601309 70%, #000000 100%);
+  --brand: #bc0f35;
   --drop: drop-shadow(-4px 10px 8px #ababab);
   --splash: linear-gradient(
     #ffffff 0%,
