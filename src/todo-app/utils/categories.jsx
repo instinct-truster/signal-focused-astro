@@ -1,9 +1,9 @@
 /** @type {Array<{ name: string; iconName: import("../components/Icon").IconProps["name"] }>} */
 export const categories = [
-  { name: "faith", iconName: "church" },
-  { name: "family", iconName: "airplane" },
-  { name: "fitness", iconName: "workout" },
-  { name: "finance", iconName: "laptop" },
-  { name: "fantasy", iconName: "football" },
-  { name: "fixing", iconName: "fix" },
+  { name: "FAITH", iconName: "church" },
+  { name: "FAMILY", iconName: "airplane" },
+  { name: "FITNESS", iconName: "workout" },
+  { name: "FINANCE", iconName: "laptop" },
+  { name: "FANTASY", iconName: "football" },
+  { name: "FIXING", iconName: "fix" },
 ];
