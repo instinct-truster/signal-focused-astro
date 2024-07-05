@@ -18,12 +18,21 @@ const pageTitle = "SIGNAL FOCUSED | HOME";
         </div>
       </div>
       <div class="card">
+        <a href="/categories/digital%20entertainment">
+          <img class="gaming-image" src="/images/gaming.jpg" alt="" />
+        </a>
+        <div class="card-content">
+          <h3>Gaming Blog</h3>
+          <p>Video game in-depth reviews and recommendations</p>
+        </div>
+      </div>
+      <div class="card">
         <a href="/search">
           <img src="/images/image-search-image.avif" alt="" />
         </a>
         <div class="card-content">
           <h3>Image Search</h3>
-          <p>Find the imagery to inspire belief and love</p>
+          <p>Find just the right imagery to inspire</p>
         </div>
       </div>
       <div class="card">
@@ -33,15 +42,6 @@ const pageTitle = "SIGNAL FOCUSED | HOME";
         <div class="card-content">
           <h3>Fantasy Football Blog</h3>
           <p>Dynasty and season long opinion and strategy</p>
-        </div>
-      </div>
-      <div class="card">
-        <a href="/categories/digital%20entertainment">
-          <img src="/images/thor.jpg" alt="" />
-        </a>
-        <div class="card-content">
-          <h3>Gaming Blog</h3>
-          <p>Video game in-depth reviews and recommendations</p>
         </div>
       </div>
     </div>
@@ -78,6 +78,11 @@ const pageTitle = "SIGNAL FOCUSED | HOME";
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .gaming-image {
+    object-position: right;
+    transform: scale(1.4);
   }
 
   .card-content {
