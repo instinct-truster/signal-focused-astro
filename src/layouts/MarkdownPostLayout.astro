@@ -14,51 +14,84 @@ const displayedDate = formatArticleDate(frontmatter.date);
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <div class="post-container">
-    <h1 class="post-title">{frontmatter.title}</h1>
-    <div class="post-details-container">
-      <img class="post-avatar" src={frontmatter.avatar} alt="author" />
-      <p class="post-details" transition:animate={fade({ duration: "2s" })}>
-        {displayedDate} • {frontmatter.authors}
-        {
-          frontmatter.categories.map((category) => (
-            <a class="post-category" href={`/categories/${category}`}>
-              {category}
-            </a>
-          ))
-        }
-      </p>
+  <div class="blogpost-container">
+    <img class="blogpost-image" src={frontmatter.imageBig} alt="" />
+    <div class="blogpost-details-container">
+      <h1 class="blogpost-title">{frontmatter.title}</h1>
+      <div class="blogpost-info">
+        <img class="blogpost-avatar" src={frontmatter.avatar} alt="author" />
+        <p
+          class="blogpost-details"
+          transition:animate={fade({ duration: "1s" })}>
+          {frontmatter.authors} • {displayedDate}
+          {
+            frontmatter.categories.map((category) => (
+              <a class="blogpost-category" href={`/categories/${category}`}>
+                {category}
+              </a>
+            ))
+          }
+        </p>
+      </div>
     </div>
   </div>
-  <div class="post-content">
+  <div class="blogpost-content">
     <slot />
   </div>
 </BaseLayout>
 
 <style>
-  .post-container {
+  .blogpost-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    min-width: 300px;
+    min-height: 300px;
     margin: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+    border: 4px solid var(--cufflinks);
   }
 
-  .post-title {
+  .blogpost-image {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .blogpost-title {
+    display: flex;
     text-align: center;
     font-size: 2.25rem;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--text);
+    text-transform: uppercase;
+    margin: 0 40px;
   }
 
-  .post-details-container {
+  .blogpost-details-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    width: 100%;
+    min-height: fit-content;
     gap: 20px;
-    margin-top: 10px;
+    bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    background: rgba(0, 0, 0, 0.6);
   }
 
-  .post-avatar {
+  .blogpost-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .blogpost-avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -75,11 +108,17 @@ const displayedDate = formatArticleDate(frontmatter.date);
     flex-wrap: wrap;
   }
 
-  .post-category {
-    padding: 5px;
-    border-radius: 5px;
-    background-color: red;
+  .blogpost-category {
+    padding: 4px 8px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    background-color: var(--pop);
     color: white;
     font-size: 0.875rem;
+  }
+
+  .blogpost-content {
+    margin: 40px;
+    font-size: 1.5rem;
   }
 </style>

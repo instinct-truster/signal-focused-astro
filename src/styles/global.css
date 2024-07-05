@@ -15,6 +15,7 @@
 }
 
 :root {
+  --pop: #9c3d09;
   --bg: linear-gradient(#ff9500, #f63d00, #f63d00);
   --bg-rev: linear-gradient(#f63d00, #f63d00, #ff9500);
   --bg-clear: lightblue;
@@ -48,6 +49,7 @@
 }
 
 :root.dark {
+  --pop: #ab790c;
   --bg: linear-gradient(#000000, #601309, #601309);
   --bg-rev: linear-gradient(#601309, #601309, #000000);
   --bg-alt: #bc0f35;

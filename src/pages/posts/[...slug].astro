@@ -17,3 +17,28 @@ const { Content } = await entry.render();
 <MarkdownPostLayout frontmatter={entry.data}>
   <Content />
 </MarkdownPostLayout>
+
+<style is:global>
+  .blogpost-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .blogpost-content p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 14px 0;
+  }
+
+  .blogpost-content img {
+    border-radius: 24px;
+    margin: 0 auto;
+  }
+
+  .blogpost-content em {
+    display: flex;
+    justify-content: center;
+  }
+</style>
