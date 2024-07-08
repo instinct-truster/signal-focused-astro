@@ -7,4 +7,8 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "http://localhost:4321",
   integrations: [db(), react()],
+  // remove lines below for astro dev toolbar to return.
+  devToolbar: {
+    enabled: false,
+  },
 });

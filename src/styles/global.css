@@ -40,11 +40,11 @@
   --card: linear-gradient(orange 0%, orangered 30%, orangered 70%, orange 100%);
   color: var(--text);
   background: var(--bg);
-  --jelly-title: linear-gradient(-180deg, #32a3ff 0%, #0073c5 100%);
+  --jelly-title: linear-gradient(-180deg, #0a79d5 0%, #0073c5 100%);
   --jelly-shadow: 0 16px 20px 0 rgba(22, 75, 195, 0.5),
     0 -4px 24px rgba(0, 115, 197, 1) inset,
     0 12px 8px rgba(255, 255, 255, 0.4) inset,
-    0 4px 8px 0 rgba(47, 71, 209, 1) inset;
+    0 4px 8px 0 rgb(35, 52, 148) inset;
   --jelly-span: linear-gradient(0deg, #32a3ff 0%, #fefafd 100%);
 }
 
@@ -52,10 +52,10 @@
   --pop: #ab790c;
   --bg: linear-gradient(#000000, #601309, #601309);
   --bg-rev: linear-gradient(#601309, #601309, #000000);
-  --bg-alt: #bc0f35;
+  --bg-alt: #601309;
   --bg-base: #601309;
   --cufflinks: #bfa619;
-  --radial: radial-gradient(circle at top, #ff2018, #bc0f35, #601309);
+  --radial: radial-gradient(circle at top, #82001c, #601309, #601309);
   --header: #000000;
   --card: linear-gradient(#000000 0%, #601309 30%, #601309 70%, #000000 100%);
   --brand: #bc0f35;
@@ -71,17 +71,16 @@
   --splash-alt: linear-gradient(
     #ffffff 0%,
     #bc0f35 8%,
-    #ff2018 40%,
-    #ff2018 60%,
+    #82001c 40%,
+    #82001c 60%,
     #bc0f35 92%,
     #ffffff 100%
   );
-  --jelly-title: linear-gradient(-180deg, #ff2018 0%, #601309 100%);
+  --jelly-title: linear-gradient(-180deg, #82001c 0%, #601309 100%);
   --jelly-shadow: 0 16px 20px 0 rgba(78, 3, 12, 0.5),
-    0 -4px 24px rgba(188, 15, 53, 1) inset,
-    0 12px 8px rgba(255, 255, 255, 0.4) inset,
+    0 -4px 24px rgb(124, 0, 27) inset, 0 12px 8px rgba(255, 255, 255, 0.4) inset,
     0 4px 8px 0 rgba(96, 19, 9, 1) inset;
-  --jelly-span: linear-gradient(0deg, #ff2018 0%, #fefafd 100%);
+  --jelly-span: linear-gradient(0deg, #82001c 0%, #fefafd 100%);
 }
 
 .base-container {

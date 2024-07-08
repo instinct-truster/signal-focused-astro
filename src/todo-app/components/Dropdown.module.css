@@ -35,14 +35,14 @@
   position: absolute;
   top: 30px;
   left: 0;
-  width: 30%;
+  width: 80px;
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
-  background: #ffffff;
+  background: #fbe1ef;
   border-radius: 12px;
   padding: 4px;
 }
