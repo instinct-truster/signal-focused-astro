@@ -34,7 +34,7 @@
   z-index: 1;
   position: absolute;
   top: 30px;
-  left: 0;
+  right: 0;
   width: 80px;
   height: fit-content;
   display: flex;
@@ -42,7 +42,7 @@
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
-  background: #fbe1ef;
+  background: #ffffff;
   border-radius: 12px;
   padding: 4px;
 }
