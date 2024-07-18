@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import WingTitle from "../../components/WingTitle.astro";
+import { fetchCities, type CityData } from "~/utils/citiesApi";
+
+export const prerender = false;
+
+const pageTitle = "SIGNAL FOCUSED | WEATHER APP";
+
+const citySearchTerm = Astro.url.searchParams.get("city") ?? "";
+
+const data = await fetchCities(citySearchTerm);
+
+function createSearchParams(city: CityData) {
+  const searchParams = new URLSearchParams();
+  searchParams.append("cityName", city.name);
+  searchParams.append("lat", city.latitude.toFixed(2));
+  searchParams.append("lon", city.longitude.toFixed(2));
+  return searchParams.toString();
+}
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="title">
+    <WingTitle>WEATHER</WingTitle>
+  </div>
+
+  <div class="weather">
+    <div class="search-bar">
+      <form action="/weather">
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Search"
+          name="city"
+        />
+        <button>
+          Submit
+          <svg
+            class="search-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24">
+            <path
+              fill="var(--text)"
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14">
+            </path>
+          </svg>
+        </button>
+      </form>
+    </div>
+    {
+      data.data.map((city) => (
+        <a
+          href={`/weather/details?${createSearchParams(city)}`}
+          style="margin-bottom: 8px; background-color: black">
+          <p>{city.name}</p>
+          <p>{city.country}</p>
+        </a>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .title {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+  }
+
+  .weather {
+    height: 800px;
+    width: 600px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    background-image: url(/images/weather-evening.webp);
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    padding-top: 40px;
+  }
+
+  .search-input {
+    height: 50px;
+    outline: none;
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+    padding-left: 24px;
+    background: rgba(258, 0, 0, 0.2);
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .search-input::placeholder {
+    color: #ffffff;
+  }
+
+  .search-svg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: rgba(258, 0, 0, 0.2);
+    padding: 8px;
+    cursor: pointer;
+  }
+</style>

@@ -1,0 +1,22 @@
+---
+import WingTitle from "~/components/WingTitle.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { getImageForWeatherType } from "~/utils/getImageForWeatherType";
+import { fetchWeather } from "~/utils/weatherApi";
+
+export const prerender = false;
+
+const encodedCityName = Astro.url.searchParams.get("cityName") ?? "";
+const cityName = decodeURIComponent(encodedCityName);
+const latitude = Astro.url.searchParams.get("lat") ?? "";
+const longitude = Astro.url.searchParams.get("lon") ?? "";
+const data = await fetchWeather(latitude, longitude);
+
+const weatherBgImg = getImageForWeatherType(data.weather[0].main);
+---
+
+<BaseLayout>
+  <WingTitle>{cityName} Weather</WingTitle>
+  <p>Current Weather: {data.weather[0].description}</p>
+  <img src={weatherBgImg} alt="weather" />
+</BaseLayout>

@@ -3,7 +3,8 @@
 /// <reference types="astro/client" />
 
 interface ImportMetaEnv {
-  readonly API_KEY: string;
+  readonly CITIES_API_KEY: string;
+  readonly WEATHER_API_KEY: string;
 }
 
 interface ImportMeta {

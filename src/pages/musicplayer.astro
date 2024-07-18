@@ -1,13 +1,36 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import WingTitle from "../components/WingTitle.astro";
+import { getSongList } from "~/utils/getSongList";
+
+export const prerender = false;
+
 const pageTitle = "SIGNAL FOCUSED | MUSIC PLAYER";
+
+const songFileList = await getSongList();
+
+const search = Astro.url.searchParams.get("search")?.toLowerCase() ?? "";
+const filteredSongList = songFileList.filter((fileName) =>
+  fileName.includes(search)
+);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="main-container">
     <WingTitle>MUSIC PLAYER</WingTitle>
+    <form action="/musicplayer">
+      <input type="text" name="search" />
+      <button>Search</button>
+    </form>
     <div class="empty-space"></div>
+    {
+      filteredSongList.map((fileName) => (
+        <div>
+          <p>{fileName}</p>
+          <audio controls src={`/music/${fileName}`} />
+        </div>
+      ))
+    }
   </div>
 </BaseLayout>
 
