@@ -1,18 +1,16 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import WingTitle from "../components/WingTitle.astro";
-import { getSongList } from "~/utils/getSongList";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WingTitle from '../components/WingTitle.astro';
+import { getSongList } from '~/utils/getSongList';
 
 export const prerender = false;
 
-const pageTitle = "SIGNAL FOCUSED | MUSIC PLAYER";
+const pageTitle = 'SIGNAL FOCUSED | MUSIC PLAYER';
 
 const songFileList = await getSongList();
 
-const search = Astro.url.searchParams.get("search")?.toLowerCase() ?? "";
-const filteredSongList = songFileList.filter((fileName) =>
-  fileName.includes(search)
-);
+const search = Astro.url.searchParams.get('search')?.toLowerCase() ?? '';
+const filteredSongList = songFileList.filter((fileName) => fileName.includes(search));
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -37,7 +35,7 @@ const filteredSongList = songFileList.filter((fileName) =>
 <style>
   .main-container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     padding: 40px;
   }
 

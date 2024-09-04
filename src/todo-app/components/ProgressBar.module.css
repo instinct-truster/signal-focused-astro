@@ -1,6 +1,6 @@
 .progressBar {
   display: inline-block;
-  background: var(--cufflinks);
+  background: #61d7ff;
   border-radius: 10px;
   border: 2px solid #ffffff;
   width: 100%;
