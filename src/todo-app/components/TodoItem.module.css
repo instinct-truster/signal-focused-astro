@@ -12,12 +12,11 @@
   gap: 10px;
 }
 
-.taskName input {
+.taskName textarea {
   background: transparent;
-  border: 1px solid #ffffff;
-  border-radius: 20px;
   font-size: 0.875rem;
   outline: none;
+  border: none;
 }
 
 .actionButton {

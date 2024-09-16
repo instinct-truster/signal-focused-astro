@@ -24,8 +24,8 @@ function TodoItem({ todo }) {
             <Checkbox todo={todo} />
           </div>
           {editingMode ? (
-            <input
-              type="text"
+            <textarea
+              value={todo.name}
               onChange={(e) => setNewTodo({ ...todo, name: e.target.value })}
             />
           ) : (
